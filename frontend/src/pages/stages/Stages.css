@@ -1,0 +1,15 @@
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.stages {
+  display: grid;
+  grid-template-columns: minmax(2);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
