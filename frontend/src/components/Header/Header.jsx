@@ -1,4 +1,5 @@
 import './Header.css'
+import logo from '../../images/logo.svg';
 
 function Header() {
   return (
@@ -6,7 +7,7 @@ function Header() {
     <header className="header">
 
       <div>
-        <img className="logo" src="./images/logo.svg" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
 
       <nav className="nav_menu">
