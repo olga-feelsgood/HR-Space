@@ -2,16 +2,18 @@ import './App.css'
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
 import Form from '../Form/Form.jsx'
+import Stages from '../../pages/stages/Stages';
 
 function App() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <main>
-        < Form/>
+        {/* <Stages /> */}
+        {/* < Form /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
