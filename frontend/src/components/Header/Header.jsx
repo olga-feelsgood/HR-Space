@@ -1,5 +1,7 @@
 import './Header.css'
 import logo from '../../images/logo.svg';
+import heart from '../../images/heart.svg';
+import alarm from '../../images/alarm.svg';
 
 function Header() {
   return (
@@ -32,8 +34,14 @@ function Header() {
 
       </nav>
 
-      {/* иконки и аватарка для авторизации */}
+      {/* добавить стили чтобы исчез белый квадрат */}
+      <button type="button">
+        <img src={heart} alt="Иконка" width="20" height="20" />
+      </button>
 
+      <button type="button">
+        <img src={alarm} alt="Иконка" width="20" height="20" />
+      </button>
 
     </header>
 
