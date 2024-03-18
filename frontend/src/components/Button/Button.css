@@ -12,11 +12,16 @@
 }
 
 .button:hover {
-  background-color: #F8F8F8;
+  /* opacity: 1.3; */
   cursor: pointer;
 }
 
 .button_disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+}
+
+.button_error {
   background-color: #F8F8F8;
   color: #C2C2C2;
 }

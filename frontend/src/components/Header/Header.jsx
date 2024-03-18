@@ -2,7 +2,7 @@ import './Header.css'
 
 function Header() {
   return (
-    <div>Header</div>
+    <header>Header</header>
   )
 }
 
