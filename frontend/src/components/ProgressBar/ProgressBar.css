@@ -1,0 +1,33 @@
+.bar_title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Proxima Nova Th";
+  margin-left: 41px;
+}
+
+.bar_nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-family: "Proxima Nova Th";
+}
+
+.bar_ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 21px;
+}
+
+.bar_li {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.progress_container {
+  background-color: #f2f2f2;
+  width: 276px;
+  height: 8px;
+  fill: var(--Blue-50, #71a2ff);
+}
