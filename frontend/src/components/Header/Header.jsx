@@ -2,6 +2,8 @@ import './Header.css'
 import logo from '../../images/logo.svg';
 import heart from '../../images/heart.svg';
 import alarm from '../../images/alarm.svg';
+import cursor from '../../images/cursor.svg';
+import avatar from '../../images/avatar.svg';
 
 function Header() {
   return (
@@ -30,18 +32,44 @@ function Header() {
           {/* <Link to="/">
                   </Link> */}
           Помощь
+          <img
+            className="cursor"
+            src={cursor}
+            alt="Курсор" />
         </div>
 
       </nav>
 
-      {/* добавить стили чтобы исчез белый квадрат */}
-      <button type="button">
-        <img src={heart} alt="Иконка" width="20" height="20" />
+
+      <button
+        className="icons"
+        type="button">
+        <img src={heart}
+          alt="Лайк" />
       </button>
 
-      <button type="button">
-        <img src={alarm} alt="Иконка" width="20" height="20" />
+      <button
+        className="icons"
+        type="button">
+        <img src={alarm}
+          alt="Уведомление" />
       </button>
+
+      <div className="profile">
+        <div className="avatar">
+          <img src={avatar} />
+        </div>
+        <img
+          className="cursor"
+          src={cursor}
+          alt="Курсор" />
+        <div className="info">
+          <p>
+            Анастасия Волошина
+          </p>
+          <p>#67334 Рекрутер</p>
+        </div>
+      </div>
 
     </header>
 

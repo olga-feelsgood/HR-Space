@@ -2,7 +2,6 @@
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
 import Form from '../Form/Form.jsx'
-import Stages from '../../pages/stages/Stages';
 
 function App() {
 
@@ -10,7 +9,6 @@ function App() {
     <>
       <Header />
       <main>
-        {/* <Stages /> */}
         {/* < Form /> */}
       </main>
       {/* <Footer /> */}
