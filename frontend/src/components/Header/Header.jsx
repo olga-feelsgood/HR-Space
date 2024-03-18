@@ -7,7 +7,6 @@ import avatar from '../../images/avatar.svg';
 
 function Header() {
   return (
-
     <header className="header">
 
       <div>
@@ -72,7 +71,6 @@ function Header() {
       </div>
 
     </header>
-
   )
 }
 
