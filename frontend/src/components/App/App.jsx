@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
 import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
 import StepHome from '../StepHome/StepHome.jsx'
