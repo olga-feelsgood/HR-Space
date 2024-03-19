@@ -1,75 +1,73 @@
 import './Header.css'
-import logo from '../../images/logo.svg';
-import heart from '../../images/heart.svg';
-import alarm from '../../images/alarm.svg';
-import cursor from '../../images/cursor.svg';
-import avatar from '../../images/avatar.svg';
+import logo from '../../images/logo.svg'
+import heart from '../../images/heart.svg'
+import alarm from '../../images/alarm.svg'
+import cursor from '../../images/cursor.svg'
+import avatar from '../../images/avatar.svg'
 
 function Header() {
   return (
-    <header className="header">
+    <header className='header'>
 
-      <div>
-        <img src={logo} alt="Logo" />
+      <div className='header__logo-container'>
+        <img className='header__logo' src={logo} alt='Logo' />
       </div>
 
-      <nav className="nav_menu">
-
-        <div className="nav_el">
-          {/* <Link to="/">
-                  </Link> */}
-          Главная
-        </div>
-
-        <div className="nav_el">
-          {/* <Link to="/">
-                  </Link> */}
-          Мои заявки
-        </div>
-
-        <div className="nav_el">
-          {/* <Link to="/">
-                  </Link> */}
-          Помощь
-          <img
-            className="cursor"
-            src={cursor}
-            alt="Курсор" />
-        </div>
-
+      <nav className='header__menu'>
+        <ul className='header__links'>
+          <li>
+            <a target='_blank' href='/' className='header__link' rel='noreferrer'>Главная</a>
+          </li>
+          <li>
+            <a target='_blank' href='/' className='header__link' rel='noreferrer'>Мои заявки</a>
+          </li>
+          <li>
+            <a target='_blank' href='/' className='header__link' rel='noreferrer'>Помощь
+              <img
+                className='header__cursor'
+                src={cursor}
+                alt='Курсор' /></a>
+          </li>
+        </ul>
       </nav>
 
+      <div className='header__profile'>
+        <button
+          className='header__icons'
+          type='button'>
+          <img className='header__icon-image'
+            src={heart}
+            alt='Лайк' />
+        </button>
 
-      <button
-        className="icons"
-        type="button">
-        <img src={heart}
-          alt="Лайк" />
-      </button>
+        <button
+          className='header__icons'
+          type='button'>
+          <img className='header__icon-image'
+            src={alarm}
+            alt='Уведомление' />
+        </button>
 
-      <button
-        className="icons"
-        type="button">
-        <img src={alarm}
-          alt="Уведомление" />
-      </button>
-
-      <div className="profile">
-        <div className="avatar">
-          <img src={avatar} />
+        <div className='header__avatar'>
+          <img className='header__avatar-photo'
+            src={avatar}
+            alt='Фото профиля' />
         </div>
-        <img
-          className="cursor"
-          src={cursor}
-          alt="Курсор" />
-        <div className="info">
-          <p>
+
+        <div className='header__user'>
+          <p className='header__user-name'>
             Анастасия Волошина
           </p>
-          <p>#67334 Рекрутер</p>
+          <p className='header__user-position'>
+            #67334 Рекрутер</p>
         </div>
-      </div>
 
+        <img
+          className='header__cursor header__cursor_profile'
+          src={cursor}
+          alt='Курсор' />
+
+      </div>
     </header>
   )
 }
