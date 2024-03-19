@@ -1,4 +1,4 @@
-import '../../index.css'
+import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
@@ -53,7 +53,7 @@ function App() {
         </Routes>
       </aside>
 
-      <form>
+      <form className='form'>
         <Routes>
           <Route path='/' element={<StepHome />} />
 
