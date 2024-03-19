@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
 import StepHome from '../StepHome/StepHome.jsx'
@@ -34,6 +34,8 @@ import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 
 function App() {
 
+  let { pathname } = useLocation();
+
   return (
     <>
       <aside>
@@ -53,7 +55,7 @@ function App() {
         </Routes>
       </aside>
 
-      <form className='form'>
+      <form className={pathname==='/'?'form form_fullpage': 'form'}>
         <Routes>
           <Route path='/' element={<StepHome />} />
 

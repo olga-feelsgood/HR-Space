@@ -11,8 +11,6 @@ function ProgressBar() {
   // };
   let { pathname } = useLocation();
 
-  console.log(pathname);
-
   return (
     <section className='progress-bar'>
       <h2 className='progress-bar__title'>Создание заявки</h2>
