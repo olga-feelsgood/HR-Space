@@ -1,33 +1,52 @@
-.bar_title {
+.progress-bar {
   display: flex;
-  justify-content: flex-start;
-  font-family: "Proxima Nova Th";
-  margin-left: 41px;
+  flex-direction: column;
+  margin: 20px 44px 0;
 }
 
-.bar_nav {
+.progress-bar__title {
+  margin: 0 0 0 20px;
   display: flex;
   justify-content: flex-start;
+  font-family: 'Proxima Nova';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 42px;
+}
+
+.progress-bar__menu {
+  margin: auto;
+  display: flex;
+  /* justify-content: flex-start; */
   flex-direction: row;
-  font-family: "Proxima Nova Th";
+  font-family: 'Proxima Nova';
 }
 
-.bar_ul {
+.progress-bar__links {
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 21px;
+  gap: 67px;
+  margin: 6px 0;
 }
 
-.bar_li {
+.progress-bar__link {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.progress_container {
-  background-color: #f2f2f2;
-  width: 276px;
-  height: 8px;
-  fill: var(--Blue-50, #71a2ff);
+.progress-bar__link_active {
+  color: #71A2FF;
+}
+
+.progress-bar__step {
+  margin-bottom: 12px;
 }

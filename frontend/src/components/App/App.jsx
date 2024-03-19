@@ -1,3 +1,4 @@
+import '../../index.css'
 import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
