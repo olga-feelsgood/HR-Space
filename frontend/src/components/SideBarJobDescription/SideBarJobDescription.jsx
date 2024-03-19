@@ -1,4 +1,4 @@
-import './SideBarJobDescription.css'
+import '../SideBar/SideBar.css'
 import { NavLink, useLocation } from 'react-router-dom'
 
 function SideBarJobDescription() {
@@ -7,43 +7,43 @@ function SideBarJobDescription() {
 
   return (
     <>
-      <nav className='navigation'>
+      <nav className='side-bar'>
         <NavLink to='/jobdescription/sphere'
           className={pathname !== '/jobdescription/sphere'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Сфера</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Сфера</NavLink>
         <NavLink to='/jobdescription/city'
           className={pathname !== '/jobdescription/city'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Город</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Город</NavLink>
         <NavLink to='/jobdescription/officeremote'
           className={pathname !== '/jobdescription/officeremote'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Формат работы</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Формат работы</NavLink>
         <NavLink to='/jobdescription/salary'
           className={pathname !== '/jobdescription/salary'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Заработная плата</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Заработная плата</NavLink>
         <NavLink to='/jobdescription/workinghours'
           className={pathname !== '/jobdescription/workinghours'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>График работы</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>График работы</NavLink>
         <NavLink to='/jobdescription/employmenttype'
           className={pathname !== '/jobdescription/employmenttype'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Тип занятости</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Тип занятости</NavLink>
         <NavLink to='/jobdescription/businesstrips'
           className={pathname !== '/jobdescription/businesstrips'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Командировки</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Командировки</NavLink>
         <NavLink to='/jobdescription/subordinatesnumber'
           className={pathname !== '/jobdescription/subordinatesnumber'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Сотрудников в подчинении</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Сотрудников в подчинении</NavLink>
         <NavLink to='/jobdescription/jobpeculiarities'
           className={pathname !== '/jobdescription/jobpeculiarities'
-            ? 'navigation__link'
-            : 'navigation__link navigation__link_active'}>Особенности вакансии</NavLink>
+            ? 'side-bar__link'
+            : 'side-bar__link side-bar__link_active'}>Особенности вакансии</NavLink>
       </nav >
     </>
   )

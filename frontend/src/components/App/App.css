@@ -14,8 +14,8 @@ body {
 }
 
 .form {
-  max-width: 65%;
-  width: 65%;
+  max-width: 952px;
+  width: 952px;
   display: flex;
   position: absolute;
   right: 0;
