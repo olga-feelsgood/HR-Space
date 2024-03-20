@@ -13,9 +13,9 @@ function StepJobPeculiarities() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='job-peculiarities__container'>
         <div> StepJobPeculiarities</div>
-        <div className='office-remote__button'>
+        <div className='job-peculiarities__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

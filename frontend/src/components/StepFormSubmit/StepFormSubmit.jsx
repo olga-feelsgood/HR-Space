@@ -9,9 +9,9 @@ function StepFormSubmit() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='form-submit__container'>
         <div> StepFormSubmit</div>
-        <div className='office-remote__button'>
+        <div className='form-submit__button'>
           <Button
             stepIsValid={stepIsValid}
             buttonTitle='Опубликовать'

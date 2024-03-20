@@ -13,9 +13,9 @@ function StepCandidateFirstWorkingDay() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='candidate-firstday__container'>
         <div> StepCandidateFirstWorkingDay</div>
-        <div className='office-remote__button'>
+        <div className='candidate-firstday__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

@@ -13,9 +13,9 @@ function StepSkills() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='skills__container'>
         <div> StepSkills</div>
-        <div className='office-remote__button'>
+        <div className='skills__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

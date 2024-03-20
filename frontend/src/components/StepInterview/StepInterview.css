@@ -1,6 +1,31 @@
 .interview__container {
   display: flex;
   flex-direction: column;
+  margin: 65px 0 0 176px;
+}
+
+.interview__text {
+  color: #303233;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.interview__radiobuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.interview__error {
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 15px;
 }
 
 .interview__button {

@@ -13,9 +13,9 @@ function StepMoneyForRecruiters() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='money-recruiters__container'>
         <div> StepMoneyForRecruiters</div>
-        <div className='office-remote__button'>
+        <div className='money-recruiters__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

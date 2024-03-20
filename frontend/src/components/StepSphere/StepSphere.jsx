@@ -13,9 +13,9 @@ function StepSphere() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='sphere__container'>
         <div> StepSphere</div>
-        <div className='office-remote__button'>
+        <div className='sphere__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

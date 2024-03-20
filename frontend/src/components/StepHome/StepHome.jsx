@@ -13,9 +13,9 @@ function StepHome() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='home__container'>
         <div> StepHome</div>
-        <div className='office-remote__button'>
+        <div className='home__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

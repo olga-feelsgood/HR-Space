@@ -13,9 +13,9 @@ function StepCity() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='city__container'>
         <div> StepCity</div>
-        <div className='office-remote__button'>
+        <div className='city__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

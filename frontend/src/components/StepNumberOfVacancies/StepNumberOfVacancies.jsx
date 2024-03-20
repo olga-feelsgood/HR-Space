@@ -13,9 +13,9 @@ function StepNumberOfVacancies() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='number-vacancies__container'>
         <div> StepNumberOfVacancies</div>
-        <div className='office-remote__button'>
+        <div className='number-vacancies__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

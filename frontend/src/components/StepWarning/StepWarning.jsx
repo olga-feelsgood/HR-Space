@@ -13,9 +13,9 @@ function StepWarning() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='warning__container'>
         <div> StepWarning</div>
-        <div className='office-remote__button'>
+        <div className='warning__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

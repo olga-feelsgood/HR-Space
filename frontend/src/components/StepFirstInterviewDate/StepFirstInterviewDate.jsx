@@ -13,9 +13,9 @@ function StepFirstInterviewDate() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='interview-date__container'>
         <div> StepFirstInterviewDate</div>
-        <div className='office-remote__button'>
+        <div className='interview-date__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

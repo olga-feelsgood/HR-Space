@@ -13,9 +13,9 @@ function StepTypesOfReward() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='types-reward__container'>
         <div> StepTypesOfReward</div>
-        <div className='office-remote__button'>
+        <div className='types-reward__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

@@ -13,9 +13,9 @@ function StepRecruitersTasks() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='recruiters-tasks__container'>
         <div> StepRecruitersTasks</div>
-        <div className='office-remote__button'>
+        <div className='recruiters-tasks__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
