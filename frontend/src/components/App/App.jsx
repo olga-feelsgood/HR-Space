@@ -20,7 +20,7 @@ import StepJobPeculiarities from '../StepJobPeculiarities/StepJobPeculiarities.j
 import StepYearsOfExperience from '../StepYearsOfExperience/StepYearsOfExperience.jsx'
 import StepSkills from '../StepSkills/StepSkills.jsx'
 import StepEducation from '../StepEducation/StepEducation.jsx'
-import StepPortfolio from '../StepPortfolio/StepSphere.jsx'
+import StepPortfolio from '../StepPortfolio/StepPortfolio.jsx'
 import StepNumberOfVacancies from '../StepNumberOfVacancies/StepNumberOfVacancies.jsx'
 import StepTypesOfReward from '../StepTypesOfReward/StepTypesOfReward.jsx'
 import StepMoneyForRecruiters from '../StepMoneyForRecruiters/StepMoneyForRecruiters.jsx'
@@ -30,11 +30,16 @@ import StepFirstInterviewDate from '../StepFirstInterviewDate/StepFirstInterview
 import StepRecruitersNumber from '../StepRecruitersNumber/StepRecruitersNumber.jsx'
 import StepRecruitersTasks from '../StepRecruitersTasks/StepRecruitersTasks.jsx'
 import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecruitersPeculiarities.jsx'
+import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 
 function App() {
 
   let { pathname } = useLocation();
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+  }
 
   return (
     <>
@@ -55,7 +60,7 @@ function App() {
         </Routes>
       </aside>
 
-      <form className={pathname==='/'?'form form_fullpage': 'form'}>
+      <form className={pathname==='/' || pathname==='/formsubmit'?'form form_fullpage': 'form'} onSubmit={handleSubmit}>
         <Routes>
           <Route path='/' element={<StepHome />} />
 
@@ -85,6 +90,8 @@ function App() {
           <Route path='/recruiterrequirements/recruitersnumber' element={<StepRecruitersNumber />} />
           <Route path='/recruiterrequirements/recruiterstasks' element={<StepRecruitersTasks />} />
           <Route path='/recruiterrequirements/recruiterspeculiarities' element={<StepRecruitersPeculiarities />} />
+
+          <Route path='/formsubmit' element={<StepFormSubmit />} />
 
           <Route path='*' element={<PageNotFound />} />
         </Routes>

@@ -1,26 +1,21 @@
-import './StepMoneyForRecruiters.css'
+import './StepFormSubmit.css'
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
-function StepMoneyForRecruiters() {
+function StepFormSubmit() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-
-  let navigate = useNavigate();
-  const onRedirect = () => navigate('/workingconditions/candidatefirstworkingday');
 
   return (
     <>
       <div className='office-remote__container'>
-        <div> StepMoneyForRecruiters</div>
+        <div> StepFormSubmit</div>
         <div className='office-remote__button'>
           <Button
-            onClick={onRedirect}
             stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
+            buttonTitle='Опубликовать'
+            buttonType='submit'
           />
         </div>
       </div>
@@ -28,4 +23,4 @@ function StepMoneyForRecruiters() {
   )
 }
 
-export default StepMoneyForRecruiters
+export default StepFormSubmit

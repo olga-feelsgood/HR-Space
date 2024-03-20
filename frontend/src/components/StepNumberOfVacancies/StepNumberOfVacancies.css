@@ -1,0 +1,8 @@
+.number-vacancies__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-vacancies__button {
+  margin: 200px 0 0 300px;
+}

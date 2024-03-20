@@ -1,0 +1,8 @@
+.job-peculiarities__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-peculiarities__button {
+  margin: 200px 0 0 300px;
+}

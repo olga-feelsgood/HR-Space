@@ -1,0 +1,8 @@
+.warning__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.warning__button {
+  margin: 200px 0 0 300px;
+}

@@ -1,0 +1,8 @@
+.recruiters-tasks__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruiters-tasks__button {
+  margin: 200px 0 0 300px;
+}

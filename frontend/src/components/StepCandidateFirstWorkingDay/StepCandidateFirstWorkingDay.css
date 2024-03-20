@@ -1,0 +1,8 @@
+.candidate-firstday__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-firstday__button {
+  margin: 200px 0 0 300px;
+}
