@@ -30,9 +30,9 @@ function StepSphere() {
     <div className='sphere__container'>
 
       <input
-        className="stephome__input"
+        className="sphere__input"
         type="text"
-        name="vacancyName"
+        name="sphereName"
         value={inputValue}
         onChange={handleInputChange}
         placeholder="Введите название сферы"

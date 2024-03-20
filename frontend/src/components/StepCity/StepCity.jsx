@@ -1,5 +1,6 @@
 import './StepCity.css'
 import Button from '../Button/Button.jsx'
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,15 +8,29 @@ import { useNavigate } from 'react-router-dom';
 function StepCity() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/officeremote');
 
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
     <>
-      <div className='office-remote__container'>
-        <div> StepCity</div>
-        <div className='office-remote__button'>
+      <div className='city__container'>
+
+        <input
+          className="city__input"
+          type="text"
+          name="cityName"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="Введите название города"
+        />
+        <div className="city__current">  <CurrentApplicationBox /></div>
+        <div className='city__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
