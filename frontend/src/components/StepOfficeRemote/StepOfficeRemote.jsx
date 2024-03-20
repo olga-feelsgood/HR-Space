@@ -2,30 +2,50 @@ import './StepOfficeRemote.css'
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { Formik, Field } from "formik";
 
 function StepOfficeRemote() {
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
+  const navigate = useNavigate();
 
-  let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/salary');
+  const initialValues = {
+    officeType: ''
+  };
+
+  const handleSubmit = (values) => {
+    console.log(values);
+    navigate('/jobdescription/salary');
+  };
 
   return (
-    <>
-      <div className='office-remote__container'>
-        <div> StepOfficeRemote</div>
-        <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
-      </div>
-    </>
-  )
+    <div className='office-remote__container'>
+      <Formik
+        className="form"
+        initialValues={initialValues}
+        onSubmit={handleSubmit}>
+        <form>
+          <label>
+            <Field type="radio" name="officeType" value="Удаленная" />
+            Удаленная
+          </label>
+          <label>
+            <Field type="radio" name="officeType" value="Гибрид" />
+            Гибрид
+          </label>
+          <label>
+            <Field type="radio" name="officeType" value="Офис" />
+            Офис
+          </label>
+
+          <div className='office-remote__button'>
+            <Button
+              type="submit"
+              buttonTitle='Далее'
+            />
+          </div>
+        </form>
+      </Formik>
+    </div>
+  );
 }
 
-export default StepOfficeRemote
+export default StepOfficeRemote;

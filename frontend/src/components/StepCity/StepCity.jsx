@@ -1,5 +1,6 @@
 import './StepCity.css'
 import Button from '../Button/Button.jsx'
+import search from '../../images/search.svg';
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -37,6 +38,7 @@ function StepCity() {
         <datalist
           className="datalist"
           id="cities">
+          <img src={search} alt="Поиск" />
           {cities.map((city, index) => (
             <option key={index} value={city} />
           ))}

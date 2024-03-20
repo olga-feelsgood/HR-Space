@@ -1,6 +1,29 @@
 .office-remote__container {
   display: flex;
+  max-width: 208px;
+  margin-top: 48px;
+  margin-left: 135px;
+  column-gap: 23px;
   flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  color: var(--Gray-80, #303233);
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164%;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
 }
 
 .office-remote__button {
