@@ -1,0 +1,8 @@
+.sphere__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sphere__button {
+  margin: 200px 0 0 300px;
+}

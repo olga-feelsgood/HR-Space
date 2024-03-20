@@ -1,0 +1,8 @@
+.salary__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.salary__button {
+  margin: 200px 0 0 300px;
+}
