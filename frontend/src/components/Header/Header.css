@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  max-width: 1440px;
+  width: 1352px;
   height: 76px;
   margin: 0;
   padding: 0 96px;
@@ -48,7 +48,6 @@
   flex-direction: row;
   align-items: center;
   align-content: space-between;
-
 }
 
 .header__icons {
@@ -69,12 +68,6 @@
   flex-shrink: 0;
   margin-left: 14px;
 }
-
-.header__cursor_profile {
-  margin-top: -15px;
-  margin-left: 18px;
-}
-
 .header__avatar {
   border-radius: 50%;
   width: 40px;
@@ -91,18 +84,27 @@
 }
 
 .header__user-name {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Arial;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__change_profile {
+  width: 20px;
+  height: 24px;
 }
 
 .header__user-position {
-  color: #BABDBF;
+  color: #babdbf;
   margin: 0;
-  font-family: Arial;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
