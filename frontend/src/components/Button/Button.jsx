@@ -1,10 +1,9 @@
 import './Button.css';
 
-function Button() {
+function Button(props) {
 
   return (
-      <button className='button' type='button' >Label</button>
-      // <button className='button__' type='sumbit' disabled={!props.isValid}>{props.buttonTitle}</button>
+      <button onClick={props.onClick} className={`button ${!props.stepIsValid && 'button_disabled'}`} type={props.buttonType} disabled={!props.stepIsValid}>{props.buttonTitle}</button>
   )
 }
 
