@@ -15,15 +15,12 @@ body {
 
 .form {
   max-width: 952px;
-  width: 952px;
-  display: flex;
-  position: absolute;
-  right: 0;
-  margin-right: 44px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .form_fullpage {
   max-width: 100%;
-  width: 1352px;
-  margin-left: 44px;
+  width: 100%;
+  margin: 0 auto;
 }

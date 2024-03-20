@@ -15,6 +15,7 @@ function PageNotFound() {
         <p className='notfound__link link' onClick={goBack}>Назад</p>
       </main >
     </>
+
   )
 }
 

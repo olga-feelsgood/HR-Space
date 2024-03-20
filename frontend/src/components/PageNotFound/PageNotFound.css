@@ -1,7 +1,11 @@
 .notfound {
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  margin: auto;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .notfound__title {
@@ -23,36 +27,10 @@
 
 .notfound__link {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 50px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #3456F3;
+  color: #3456f3;
   text-align: center;
-}
-
-@media(max-width: 768px) {
-  .notfound__title {
-    padding-top: 408px;
-  }
-}
-
-@media(max-width: 320px) {
-  .notfound__title {
-    padding-top: 329px;
-    font-size: 80px;
-    line-height: 97px;
-  }
-
-  .notfound__text {
-    font-size: 12px;
-    line-height: 15px;
-    padding-top: 10px;
-  }
-
-  .notfound__link {
-    font-size: 12px;
-    line-height: 15px;
-    padding-top: 284px;
-  }
 }
