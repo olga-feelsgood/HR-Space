@@ -29,3 +29,9 @@ input[type="radio"] {
 .office-remote__button {
   margin: 200px 0 0 300px;
 }
+
+.form__current {
+  margin-top: 150px;
+  width: 780px;
+  padding: 20px;
+}

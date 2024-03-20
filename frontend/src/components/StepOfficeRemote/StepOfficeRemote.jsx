@@ -1,5 +1,6 @@
 import './StepOfficeRemote.css'
 import Button from '../Button/Button.jsx'
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Formik, Field } from "formik";
@@ -35,7 +36,8 @@ function StepOfficeRemote() {
             <Field type="radio" name="officeType" value="Офис" />
             Офис
           </label>
-
+          <div className="form__current">
+            <CurrentApplicationBox /></div>
           <div className='office-remote__button'>
             <Button
               type="submit"
