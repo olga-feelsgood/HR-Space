@@ -2,24 +2,22 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 20px 44px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .progress-bar__title {
-  margin: 0 0 0 20px;
-  display: flex;
-  justify-content: flex-start;
   font-family: "Proxima Nova";
-  font-size: 28px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: normal;
-  line-height: 42px;
+  line-height: 1.5;
+  margin-left: 40px;
 }
 
 .progress-bar__menu {
   margin: auto;
   display: flex;
-  /* justify-content: flex-start; */
   flex-direction: row;
   font-family: "Proxima Nova";
 }
@@ -29,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 67px;
+  gap: 2rem;
   margin: 6px 0;
 }
 
@@ -38,10 +36,10 @@
   justify-content: space-between;
   flex-direction: column;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 .progress-bar__link_active {
@@ -49,5 +47,12 @@
 }
 
 .progress-bar__step {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 1440px) {
+  .progress-bar {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
