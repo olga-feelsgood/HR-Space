@@ -6,3 +6,25 @@
 .working-hours__button {
   margin: 200px 0 0 300px;
 }
+
+.working-hours__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100%;
+  margin-left: 50px;
+  gap: 12px;
+}
+
+.working-hours__input {
+  display: flex;
+  min-height: 48px;
+  max-width: 320px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+}
