@@ -3,7 +3,7 @@ import logo from '../../images/logo.svg'
 import heart from '../../images/heart.svg'
 import alarm from '../../images/alarm.svg'
 import cursor from '../../images/cursor.svg'
-import change from '../../images/add.svg';
+import change from '../../images/change.svg';
 import avatar from '../../images/avatar.svg'
 
 function Header() {
