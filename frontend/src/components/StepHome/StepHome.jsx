@@ -1,31 +1,26 @@
+import React from 'react';
 import './StepHome.css'
-import Button from '../Button/Button.jsx'
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useForm } from '../../hooks/useForm';
+import Button from '../Button/Button';
 
 function StepHome() {
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
-
-  let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/warning');
+  const { values, handleChange, errorMessage } = useForm({ vacancyName: '' });
 
   return (
-    <>
-      <div className='office-remote__container'>
-        <div> StepHome</div>
-        <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
-      </div>
-    </>
-  )
+    <form className="stephome">
+      <h1 className="stephome__title">Название вакансии</h1>
+      <input
+        className="stephome__input"
+        type="text"
+        value={values.vacancyName}
+        onChange={handleChange}
+        name="vacancyName"
+        placeholder="Введите название вакансии"
+      />
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      <Button />
+    </form>
+  );
 }
 
-export default StepHome
+export default StepHome;
