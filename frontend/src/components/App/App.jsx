@@ -55,7 +55,7 @@ function App() {
         </Routes>
       </aside>
 
-      <form className={pathname==='/'?'form form_fullpage': 'form'}>
+      <form className={pathname === '/' ? 'form form_fullpage' : 'form'}>
         <Routes>
           <Route path='/' element={<StepHome />} />
 

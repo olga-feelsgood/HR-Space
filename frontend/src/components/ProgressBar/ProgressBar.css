@@ -1,4 +1,5 @@
 .progress-bar {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 20px 44px 0;
@@ -8,7 +9,7 @@
   margin: 0 0 0 20px;
   display: flex;
   justify-content: flex-start;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
   font-size: 28px;
   font-style: normal;
   font-weight: normal;
@@ -20,7 +21,7 @@
   display: flex;
   /* justify-content: flex-start; */
   flex-direction: row;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
 }
 
 .progress-bar__links {
@@ -44,7 +45,7 @@
 }
 
 .progress-bar__link_active {
-  color: #71A2FF;
+  color: #71a2ff;
 }
 
 .progress-bar__step {
