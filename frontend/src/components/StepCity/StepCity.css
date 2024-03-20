@@ -24,3 +24,18 @@
   background: var(--White-10, #fff);
   margin-top: 60px;
 }
+
+.datalist {
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: var(--White-10, #fff);
+}
+
+option {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+option:hover {
+  background-color: #f0f0f0;
+}

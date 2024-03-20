@@ -17,7 +17,7 @@ function StepSphere() {
   const handleChipClick = (chip) => {
     console.log('Вы добавили чипс');
   }
-  //пропишу логику позже
+  //оставлю пока эту функцию на будущее
   const handleDelete = () => {
     console.log('Вы удалили чипс');
   };

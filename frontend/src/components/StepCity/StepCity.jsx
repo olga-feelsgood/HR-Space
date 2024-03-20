@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 function StepCity() {
+  //примерно список для проверки
+  const cities = ['Москва', 'Тверь', 'Санкт-Петербург', 'Екатеринбург', 'Cамара', 'Челябинск', 'Владивосток'];
+
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
   const [inputValue, setInputValue] = useState('');
@@ -17,6 +20,7 @@ function StepCity() {
     setInputValue(event.target.value);
   };
 
+
   return (
     <>
       <div className='city__container'>
@@ -25,10 +29,18 @@ function StepCity() {
           className="city__input"
           type="text"
           name="cityName"
+          list="cities"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Введите название города"
         />
+        <datalist
+          className="datalist"
+          id="cities">
+          {cities.map((city, index) => (
+            <option key={index} value={city} />
+          ))}
+        </datalist>
         <div className="city__current">  <CurrentApplicationBox /></div>
         <div className='city__button'>
           <Button
