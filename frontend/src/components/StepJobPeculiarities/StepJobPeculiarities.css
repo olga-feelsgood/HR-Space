@@ -1,0 +1,38 @@
+.subordinates__input {
+  display: flex;
+  width: 385px;
+  height: 286px;
+  padding: 20px 31px 46px;
+  color: var(--Gray-50, #959799);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: var(--Gray-50, #959799);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  white-space: break-spaces;
+}
+
+.character-count {
+  position: absolute;
+  top: 300px;
+  left: 380px;
+  color: var(--Gray-50, #959799);
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
