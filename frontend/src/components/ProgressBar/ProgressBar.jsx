@@ -17,7 +17,9 @@ function ProgressBar() {
       <h2 className='progress-bar__title'>{pathname === '/formsubmit' || pathname === '/formpayment' ? 'Конец заявки' : 'Создание заявки'}</h2>
       <nav className='progress-bar__menu'>
         <ul className='progress-bar__links'>
-          {pathname === '/jobdescription' ||
+          {pathname === '/' ||
+            pathname === '/jobdescription' ||
+            pathname === '/jobdescription' ||
             pathname === '/jobdescription/warning' ||
             pathname === '/jobdescription/sphere' ||
             pathname === '/jobdescription/city' ||

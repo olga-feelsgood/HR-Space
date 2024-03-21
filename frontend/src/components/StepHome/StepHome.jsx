@@ -5,7 +5,7 @@ import { useForm } from '../../hooks/useForm';
 import Button from '../Button/Button';
 
 function StepHome() {
-  const { values, handleChange, errorMessage } = useForm({ vacancyName: '' });
+  const { values, handleChange, errorMessage } = useForm({ name: '' });
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -16,14 +16,14 @@ function StepHome() {
       <div className='home__input-container'>
         <h1 className='home__title'>Название вакансии</h1>
         <input
-          className='home__input'
-          type="text"
+          className='home__input home__input_error'
+          type='text'
           value={values.vacancyName}
           onChange={handleChange}
-          name="vacancyName"
+          name='name'
           placeholder="Введите название вакансии"
         />
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+        <span className='home__error'>{errorMessage}</span>
       </div>
       <div className='home__button'>
         <Button

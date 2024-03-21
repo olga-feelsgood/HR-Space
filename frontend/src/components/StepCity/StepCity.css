@@ -1,12 +1,11 @@
 .city__container {
   display: flex;
   flex-direction: column;
-  margin-left: 150px;
 }
 
 .city__input {
   display: flex;
-  width: 320px;
+  width: 552px;
   height: 48px;
   padding-left: 16px;
   justify-content: flex-end;
@@ -15,7 +14,15 @@
   border-radius: 8px;
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
-  margin-top: 60px;
+  margin: 48px 0 6px 200px;
+}
+
+.city__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.city__input_error {
+  border: 1px solid #EC3C3C;
 }
 
 .city_datalist {
@@ -33,10 +40,24 @@ option:hover {
   background-color: #f0f0f0;
 }
 
+.city__error {
+  display: block;
+  min-height: 17px;
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 15px 0;
+  padding-left: 200px;
+}
+
 .city__current {
-  margin-top: 150px;
+  margin-left: 185px;
+  margin-top: 255px;
 }
 
 .city__button {
-  margin: 100px 0 0 500px;
+  margin: 30px 0 0 770px;
 }

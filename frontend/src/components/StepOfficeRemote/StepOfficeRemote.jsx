@@ -37,7 +37,7 @@ function StepOfficeRemote() {
             radioName='work_format'//от бэка
           />
         </div>
-        {errorMessage && <p className='office-remote__error'>Ничего не выбрано</p>}
+        {errorMessage && <span className='office-remote__error'>Ничего не выбрано</span>}
         <div className="office-remote__current"><CurrentApplicationBox /></div>
         <div className='office-remote__button'>
           <Button

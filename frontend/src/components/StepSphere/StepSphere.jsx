@@ -1,15 +1,18 @@
 import './StepSphere.css';
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox.jsx'
-import check from '../../images/check.svg';
 import Button from '../Button/Button.jsx';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
 
 function StepSphere() {
+
+  const { errorMessage } = useForm({ line_of_business: '' });
   const [stepIsValid, setStepIsValid] = useState(true);
   const [inputValue, setInputValue] = useState('');
+  // const [errorMessage, setErrorMessage] = useState(true);
 
   const navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/city');
@@ -30,16 +33,16 @@ function StepSphere() {
   return (
 
     <div className='sphere__container'>
-
       <input
-        className="sphere__input"
+        className="sphere__input sphere__input_error"
         type="text"
-        name="sphereName"
+        name="line_of_business"
         value={inputValue}
         onChange={handleInputChange}
         placeholder="Введите название сферы"
       />
-
+      <span className='sphere__error'>{errorMessage}</span>
+      {/* {errorMessage && <span className='sphere__error'>Ничего не выбрано</span>} */}
       <Stack
         className="sphere__chips-container"
         direction="row" spacing={1}>
@@ -124,6 +127,7 @@ function StepSphere() {
         />
 
       </Stack>
+
       <div className="sphere__current">  <CurrentApplicationBox /></div>
       <div className='sphere__button'>
         <Button

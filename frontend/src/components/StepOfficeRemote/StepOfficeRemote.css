@@ -1,8 +1,8 @@
 .office-remote__container {
   display: flex;
   max-width: 208px;
-  margin-top: 48px;
-  margin-left: 135px;
+  margin-top: 30px;
+  margin-left: 190px;
   column-gap: 23px;
   flex-direction: column;
   padding: 20px;
@@ -15,6 +15,8 @@
 }
 
 .office-remote__error {
+  display: block;
+  min-height: 17px;
   color: #EC3C3C;
   font-family: Arial;
   font-size: 20px;
@@ -22,14 +24,14 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 10px;
-}
-
-.office-remote__button {
-  margin: 50px 0 0 300px;
+  padding-left: 10px;
 }
 
 .office-remote__current {
-  margin-top: 50px;
+  margin-top: 138px;
   width: 780px;
-  padding: 20px;
+}
+
+.office-remote__button {
+  margin: 30px 0 0 560px;
 }
