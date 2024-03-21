@@ -1,8 +1,43 @@
 .interview-date__container {
   display: flex;
   flex-direction: column;
+  margin-left: 150px;
 }
 
+.interview-date__picker {
+  position: relative;
+  width: 320px;
+  height: 48px;
+  margin-top: 60px;
+  display: flex;
+  width: 320px;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: var(--Gray-80, #303233);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.calendar__icon {
+  position: absolute;
+  right: 430px;
+  top: 75px;
+  cursor: pointer;
+}
 .interview-date__button {
-  margin: 200px 0 0 300px;
+  margin-top: 20px;
 }
