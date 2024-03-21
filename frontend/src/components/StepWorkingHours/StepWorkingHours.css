@@ -4,25 +4,6 @@
   margin: 65px 0 0 176px;
 }
 
-.working-hours__radiobuttons {
-  display: flex;
-  flex-direction: column;
-}
-
-.working-hours__error {
-  color: #EC3C3C;
-  font-family: Arial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 0 0 0 15px;
-}
-
-.working-hours__button {
-  margin: 200px 0 0 300px;
-}
-
 .working-hours__inputs {
   display: flex;
   flex-direction: row;
@@ -43,4 +24,23 @@
   border-radius: 8px;
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
+}
+
+.working-hours__radiobuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.working-hours__error {
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 15px;
+}
+
+.working-hours__button {
+  margin: 200px 0 0 300px;
 }

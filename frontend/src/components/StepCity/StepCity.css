@@ -4,13 +4,6 @@
   margin-left: 150px;
 }
 
-.city__current {
-  margin-top: 150px;
-}
-
-.city__button {
-  margin: 100px 0 0 500px;
-}
 .city__input {
   display: flex;
   width: 320px;
@@ -25,7 +18,7 @@
   margin-top: 60px;
 }
 
-.datalist {
+.city_datalist {
   max-height: 200px;
   overflow-y: auto;
   background-color: var(--White-10, #fff);
@@ -38,4 +31,12 @@ option {
 
 option:hover {
   background-color: #f0f0f0;
+}
+
+.city__current {
+  margin-top: 150px;
+}
+
+.city__button {
+  margin: 100px 0 0 500px;
 }

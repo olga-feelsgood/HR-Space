@@ -4,7 +4,6 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Formik, Field } from "formik";
 
 
 function StepOfficeRemote() {
@@ -12,11 +11,8 @@ function StepOfficeRemote() {
   const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
 
-
-  const handleSubmit = (values) => {
-    console.log(values);
-    navigate('/jobdescription/salary');
-  };
+  let navigate = useNavigate();
+  const onRedirect = () => navigate('/jobdescription/salary');
 
   return (
     <>
@@ -42,8 +38,7 @@ function StepOfficeRemote() {
           />
         </div>
         {errorMessage && <p className='office-remote__error'>Ничего не выбрано</p>}
-                   <div className="form__current">
-            <CurrentApplicationBox /></div>
+        <div className="office-remote__current"><CurrentApplicationBox /></div>
         <div className='office-remote__button'>
           <Button
             onClick={onRedirect}

@@ -10,7 +10,7 @@ function StepSubordinatesNumber() {
   const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/workinghours');
+  const onRedirect = () => navigate('/jobdescription/jobpeculiarities');
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -18,11 +18,9 @@ function StepSubordinatesNumber() {
 
 
   return (
-    <>
-          <div className='subordinates-number__container'>
-      <div className='subordinates__container'>
+    <div className='subordinates-number__container'>
         <input
-          className="subordinates__input"
+          className="subordinates-number__input"
           type="text"
           name="the begin of the workday"
           value={inputValue}
@@ -38,7 +36,6 @@ function StepSubordinatesNumber() {
           />
         </div>
       </div>
-    </>
   )
 }
 

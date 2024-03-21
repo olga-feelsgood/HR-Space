@@ -17,7 +17,6 @@ function StepSalary() {
   };
 
   return (
-    <>
       <div className='salary__container'>
         <h1 className="salary__title">Заработная плата до вычета НДФЛ</h1>
         <div className="salary__inputs">
@@ -48,7 +47,6 @@ function StepSalary() {
           />
         </div>
       </div>
-    </>
   )
 }
 

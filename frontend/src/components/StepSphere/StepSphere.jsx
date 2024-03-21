@@ -1,4 +1,5 @@
 import './StepSphere.css';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox.jsx'
 import check from '../../images/check.svg';
 import Button from '../Button/Button.jsx';
 import Chip from '@mui/material/Chip';
@@ -38,8 +39,9 @@ function StepSphere() {
         onChange={handleInputChange}
         placeholder="Введите название сферы"
       />
+
       <Stack
-        className="chips__container"
+        className="sphere__chips-container"
         direction="row" spacing={1}>
 
         <Chip
@@ -48,55 +50,54 @@ function StepSphere() {
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Автомобильный бизнес")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Добывающая отрасль"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Добывающая отрасль")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Лесная промышленность"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Лесная промышленность")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Металлургия"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Металлургия")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Продукты питания"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Продукты питания")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Сельское хозяйство"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Сельское хозяйство")}
-
         />
+
         <Chip
           className="sphere__chip"
           label="Строительство"
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Строительство")}
-
         />
 
         <Chip
@@ -112,7 +113,6 @@ function StepSphere() {
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Химическое производство")}
-
         />
 
         <Chip
@@ -121,22 +121,17 @@ function StepSphere() {
           variant="outlined"
           onDelete={handleDelete}
           onClick={() => handleChipClick("Энергетика")}
-
         />
+
       </Stack>
-      <div className="sphere_current">
-        <h2 className="current__title">Текущая заявка</h2>
-        <img src={check} className="current__check" />
-        <p> </p>
-      </div>
+      <div className="sphere__current">  <CurrentApplicationBox /></div>
       <div className='sphere__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </div>
   );

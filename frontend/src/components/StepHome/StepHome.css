@@ -1,14 +1,17 @@
-.stephome {
+.home__container {
   display: flex;
-  width: 552px;
   flex-direction: column;
+  margin: auto;
+}
+
+.home__input-container {
   justify-content: center;
   align-items: center;
-  margin: 100px auto;
+  margin: 210px auto 0;
   box-sizing: border-box;
 }
 
-.stephome__title {
+.home__title {
   color: var(--Gray-80, #303233);
   font-family: "Proxima Nova";
   font-size: 28px;
@@ -19,7 +22,7 @@
   margin-bottom: 13px;
 }
 
-.stephome__input {
+.home__input {
   display: flex;
   width: 552px;
   height: 48px;
@@ -31,4 +34,8 @@
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
   margin-bottom: 60px;
+}
+
+.home__button {
+  margin: auto;
 }

@@ -21,38 +21,35 @@ function StepCity() {
     setInputValue(event.target.value);
   };
 
-
   return (
-    <>
-      <div className='city__container'>
-        <input
-          className="city__input"
-          type="text"
-          name="cityName"
-          list="cities"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="Введите название города"
+    <div className='city__container'>
+      <input
+        className="city__input"
+        type="text"
+        name="cityName"
+        list="cities"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Введите название города"
+      />
+      <datalist
+        className="city__datalist"
+        id="cities">
+        <img src={search} alt="Поиск" />
+        {cities.map((city, index) => (
+          <option key={index} value={city} />
+        ))}
+      </datalist>
+      <div className="city__current"><CurrentApplicationBox /></div>
+      <div className='city__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
         />
-        <datalist
-          className="datalist"
-          id="cities">
-          <img src={search} alt="Поиск" />
-          {cities.map((city, index) => (
-            <option key={index} value={city} />
-          ))}
-        </datalist>
-        <div className="city__current">  <CurrentApplicationBox /></div>
-        <div className='city__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
       </div>
-    </>
+    </div>
   )
 }
 

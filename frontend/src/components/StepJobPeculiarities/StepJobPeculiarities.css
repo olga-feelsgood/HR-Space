@@ -1,4 +1,9 @@
-.subordinates__input {
+.job-peculiarities__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-peculiarities__input {
   display: flex;
   width: 385px;
   height: 286px;
@@ -24,7 +29,7 @@
   white-space: break-spaces;
 }
 
-.character-count {
+.job-peculiarities__character-count {
   position: absolute;
   top: 300px;
   left: 380px;
@@ -35,11 +40,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
-}
-
-.job-peculiarities__container {
-  display: flex;
-  flex-direction: column;
 }
 
 .job-peculiarities__button {

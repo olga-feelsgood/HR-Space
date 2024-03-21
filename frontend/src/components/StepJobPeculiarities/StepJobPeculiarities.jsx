@@ -13,7 +13,7 @@ function StepJobPeculiarities() {
   const maxLength = 100;
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/workinghours');
+  const onRedirect = () => navigate('/candidaterequirements/yearsofexperience');
 
 
   const handleChange = (event) => {
@@ -23,11 +23,10 @@ function StepJobPeculiarities() {
   const progress = (text.length / maxLength) * 1000;
 
   return (
-    <>
-          <div className='job-peculiarities__container'>
-      <div className='subordinates__container'>
+    <div className='job-peculiarities__container'>
+      <div className='job-peculiarities__input-container'>
         <input
-          className="subordinates__input"
+          className="job-peculiarities__input"
           type="text"
           name="paragraph"
           value={inputValue}
@@ -37,17 +36,17 @@ function StepJobPeculiarities() {
           запуска нового проекта.                                                                                                                          Не дублируйте ранее описанные пункты."
         />
         <div style={{ width: `${progress}%` }}></div>
-        <div className="character-count">{text.length}/{maxLength}</div>
-               <div className='job-peculiarities__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
-</div>
-    </>
+        <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
+      </div>
+      <div className='job-peculiarities__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
+    </div>
   )
 }
 
