@@ -5,26 +5,21 @@ import { useNavigate } from 'react-router-dom';
 
 
 function StepWarning() {
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/sphere');
 
   return (
-    <>
-      <div className='office-remote__container'>
-        <div> StepWarning</div>
-        <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
-      </div>
-    </>
+    <section className="warning__section">
+      <h1 className="warning__title">Заполните все поля заявки максимально подробно.</h1>
+      <p className="warning__text">Это поможет ускорить процесс поиска кандидата
+        и сделает его максимально релевантным вашему запросу.</p>
+      <Button
+        onClick={onRedirect}
+        stepIsValid={stepIsValid}
+        buttonTitle='Далее'
+        buttonType='button' />
+    </section>
   )
 }
 

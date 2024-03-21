@@ -9,7 +9,7 @@ function StepHome() {
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/application');
+  const onRedirect = () => navigate('/jobdescription/warning');
 
   return (
     <section className="stephome">

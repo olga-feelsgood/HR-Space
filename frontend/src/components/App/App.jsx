@@ -31,7 +31,7 @@ import StepRecruitersNumber from '../StepRecruitersNumber/StepRecruitersNumber.j
 import StepRecruitersTasks from '../StepRecruitersTasks/StepRecruitersTasks.jsx'
 import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecruitersPeculiarities.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
-import ApplicationPage from '../ApplicationPage/ApplicationPage'
+
 
 function App() {
 
@@ -59,7 +59,6 @@ function App() {
       <form className={pathname === '/' ? 'form form_fullpage' : 'form'}>
         <Routes>
           <Route path='/' element={<StepHome />} />
-          <Route path='/jobdescription/application' element={<ApplicationPage />} />
 
           <Route path='/jobdescription/warning' element={<StepWarning />} />
           <Route path='/jobdescription/sphere' element={<StepSphere />} />
