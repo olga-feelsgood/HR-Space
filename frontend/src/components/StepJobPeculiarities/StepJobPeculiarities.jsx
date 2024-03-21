@@ -35,7 +35,7 @@ function StepJobPeculiarities() {
           placeholder="Например, Вы ищете сотрудника для 
           запуска нового проекта.                                                                                                                          Не дублируйте ранее описанные пункты."
         />
-        <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+        <div style={{ width: `${progress}%` }}></div>
         <div className="character-count">{text.length}/{maxLength}</div>
         <div className='subordinates__button'>
 
