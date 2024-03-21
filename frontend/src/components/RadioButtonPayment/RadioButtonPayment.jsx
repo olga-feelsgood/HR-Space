@@ -1,14 +1,21 @@
-import './RadioButton.css';
+import '../RadioButton/RadioButton.css'
+import './RadioButtonPayment.css'
 
-function RadioButton(props) {
+function RadioButtonPayment(props) {
 
   return (
-    <label className='radio-button__label'>
+    <label className='radio-button__label-container'>
+      <div className='radio-button__label-name'>
+        <p className='radio-button__percentage'>{props.radioLabelPercentage}</p>
+        <div className='radio-button__title-container'>
+          <p className='radio-button__title'>{props.radioLabelTitle}</p>
+          <p className='radio-button__text'>{props.radioLabelText}</p>
+        </div>
+      </div>
       <input className='radio-button__input' type="radio" name={props.radioName} id={props.radioLabel} value={props.radioValue} />
       <span className='radio-button__custom'></span>
-      {props.radioTitle}
     </label>
   )
 }
 
-export default RadioButton;
+export default RadioButtonPayment;

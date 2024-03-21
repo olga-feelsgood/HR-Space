@@ -1,6 +1,7 @@
 .types-reward__container {
   display: flex;
   flex-direction: column;
+  margin: 60px 0 0 52px;
 }
 
 .types-reward__button {
