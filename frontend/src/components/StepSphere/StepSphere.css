@@ -1,8 +1,69 @@
 .sphere__container {
   display: flex;
   flex-direction: column;
+  margin: 100px 100px;
+  max-width: 780px;
+}
+
+.chips__container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .sphere__button {
-  margin: 200px 0 0 300px;
+  margin: 100px 0 0 500px;
+}
+
+.sphere__input {
+  display: flex;
+  width: 552px;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+  margin-bottom: 60px;
+}
+
+.sphere__chip {
+  border-radius: 4px;
+  border: 1px solid var(--Blue-Violet-blue-40, #cfd8fa);
+}
+
+.sphere_current {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 100px;
+  max-width: 780px;
+  min-height: 84px;
+  border-radius: 20px;
+  border: 1px solid var(--Blue-50, #71a2ff);
+  position: relative;
+}
+
+.current__title {
+  color: var(--Gray-80, #303233);
+  margin: 0;
+  font-family: "Proxima Nova";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  align-items: flex-start;
+  line-height: 42px; /* 150% */
+}
+
+.current__check {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

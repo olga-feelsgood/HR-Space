@@ -3,6 +3,7 @@ import logo from '../../images/logo.svg'
 import heart from '../../images/heart.svg'
 import alarm from '../../images/alarm.svg'
 import cursor from '../../images/cursor.svg'
+import change from '../../images/change.svg';
 import avatar from '../../images/avatar.svg'
 
 function Header() {
@@ -57,15 +58,14 @@ function Header() {
         <div className='header__user'>
           <p className='header__user-name'>
             Анастасия Волошина
+            <img
+              className='header__change_profile'
+              src={change}
+              alt='Сменить пользователя' />
           </p>
           <p className='header__user-position'>
-            #67334 Рекрутер</p>
+            #67334 Заказчик</p>
         </div>
-
-        <img
-          className='header__cursor header__cursor_profile'
-          src={cursor}
-          alt='Курсор' />
 
       </div>
     </header>

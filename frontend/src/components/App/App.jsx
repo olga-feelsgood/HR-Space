@@ -33,6 +33,7 @@ import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecr
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 
+
 function App() {
 
   let { pathname } = useLocation();
@@ -61,6 +62,7 @@ function App() {
       </aside>
 
       <form className={pathname==='/' || pathname==='/formsubmit'?'form form_fullpage': 'form'} onSubmit={handleSubmit}>
+
         <Routes>
           <Route path='/' element={<StepHome />} />
 

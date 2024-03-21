@@ -5,16 +5,16 @@ import { useNavigate } from 'react-router-dom';
 
 
 function StepWarning() {
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/sphere');
 
   return (
-    <>
+
       <div className='warning__container'>
-        <div> StepWarning</div>
+      <h1 className="warning__title">Заполните все поля заявки максимально подробно.</h1>
+      <p className="warning__text">Это поможет ускорить процесс поиска кандидата
+        и сделает его максимально релевантным вашему запросу.</p>
         <div className='warning__button'>
           <Button
             onClick={onRedirect}
@@ -22,9 +22,8 @@ function StepWarning() {
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
-      </div>
-    </>
+    </div>
+  </div>
   )
 }
 
