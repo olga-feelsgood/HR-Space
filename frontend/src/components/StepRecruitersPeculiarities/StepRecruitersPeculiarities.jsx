@@ -1,5 +1,6 @@
 import './StepRecruitersPeculiarities.css'
 import Button from '../Button/Button.jsx'
+import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +15,20 @@ function StepRecruitersPeculiarities() {
   return (
     <>
       <div className='recruiters-peculiarities__container'>
-        <div> StepRecruitersPeculiarities</div>
+      <div className='recruiters-peculiarities__checkbox'>
+          <CheckBox
+            checkboxLabel='entity'
+            checkboxTitle='Только для юридических лиц и ИП'
+            checkboxValue='entity'
+            checkboxName='hr_requirements'//от бэка
+          />
+          <CheckBox
+            checkboxLabel='freelancing'
+            checkboxTitle='Только для самозанятых и фрилансеров'
+            checkboxValue='freelancing'
+            checkboxName='hr_requirements'//от бэка
+          />
+        </div>
         <div className='recruiters-peculiarities__button'>
           <Button
             onClick={onRedirect}
