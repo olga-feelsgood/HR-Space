@@ -10,7 +10,7 @@ function StepRecruitersPeculiarities() {
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/formsubmit');
+  const onRedirect = () => navigate('/formpayment');
 
   return (
     <>

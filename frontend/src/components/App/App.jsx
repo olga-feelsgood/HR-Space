@@ -30,6 +30,7 @@ import StepFirstInterviewDate from '../StepFirstInterviewDate/StepFirstInterview
 import StepRecruitersNumber from '../StepRecruitersNumber/StepRecruitersNumber.jsx'
 import StepRecruitersTasks from '../StepRecruitersTasks/StepRecruitersTasks.jsx'
 import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecruitersPeculiarities.jsx'
+import StepCheckBeforePayment from '../StepCheckBeforePayment/StepCheckBeforePayment.jsx'
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 
@@ -61,7 +62,8 @@ function App() {
         </Routes>
       </aside>
 
-      <form className={pathname==='/' || pathname==='/formsubmit'?'form form_fullpage': 'form'} onSubmit={handleSubmit}>
+      <form className={pathname === '/' || pathname === '/formsubmit' || pathname === '/formpayment'
+        ? 'form form_fullpage' : 'form'} onSubmit={handleSubmit}>
 
         <Routes>
           <Route path='/' element={<StepHome />} />
@@ -93,6 +95,7 @@ function App() {
           <Route path='/recruiterrequirements/recruiterstasks' element={<StepRecruitersTasks />} />
           <Route path='/recruiterrequirements/recruiterspeculiarities' element={<StepRecruitersPeculiarities />} />
 
+          <Route path='/formpayment' element={<StepCheckBeforePayment />} />
           <Route path='/formsubmit' element={<StepFormSubmit />} />
 
           <Route path='*' element={<PageNotFound />} />

@@ -9,12 +9,12 @@ function ProgressBar() {
 
   let { pathname } = useLocation();
 
-    //пока что костыль, когда сделаем логику, будем брать из useFrom
-    const [stepIsActivated, setStepIsActivated] = useState(false);
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [stepIsActivated, setStepIsActivated] = useState(false);
 
   return (
     <section className='progress-bar'>
-      <h2 className='progress-bar__title'>{pathname === '/formsubmit' ? 'Конец заявки' : 'Создание заявки'}</h2>
+      <h2 className='progress-bar__title'>{pathname === '/formsubmit' || pathname === '/formpayment' ? 'Конец заявки' : 'Создание заявки'}</h2>
       <nav className='progress-bar__menu'>
         <ul className='progress-bar__links'>
           {pathname === '/jobdescription' ||
@@ -44,6 +44,7 @@ function ProgressBar() {
             pathname === '/recruiterrequirements/recruitersnumber' ||
             pathname === '/recruiterrequirements/recruiterstasks' ||
             pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formpayment' ||
             pathname === '/formsubmit' ||
             stepIsActivated
 
@@ -75,6 +76,7 @@ function ProgressBar() {
             pathname === '/recruiterrequirements/recruitersnumber' ||
             pathname === '/recruiterrequirements/recruiterstasks' ||
             pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formpayment' ||
             pathname === '/formsubmit' ||
             stepIsActivated
 
@@ -101,6 +103,7 @@ function ProgressBar() {
             pathname === '/recruiterrequirements/recruitersnumber' ||
             pathname === '/recruiterrequirements/recruiterstasks' ||
             pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formpayment' ||
             pathname === '/formsubmit' ||
             stepIsActivated
 
@@ -121,7 +124,8 @@ function ProgressBar() {
           {pathname === '/recruiterrequirements/recruitersnumber' ||
             pathname === '/recruiterrequirements/recruiterstasks' ||
             pathname === '/recruiterrequirements/recruiterspeculiarities' ||
-            pathname === '/formsubmit'  ||
+            pathname === '/formpayment' ||
+            pathname === '/formsubmit' ||
             stepIsActivated
 
             ? < li className='progress-bar__link progress-bar__link_active'>

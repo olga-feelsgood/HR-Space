@@ -10,7 +10,8 @@ function StepFormSubmit() {
   return (
     <>
       <div className='form-submit__container'>
-        <div> StepFormSubmit</div>
+        <h2 className='form-submit__title'> Заявка «Бухгалтер на производство» заполнена и оплачена.</h2>
+        <p className='form-submit__text'> После одобрения заявки модератором она станет доступна для отклика рекрутерам.</p>
         <div className='form-submit__button'>
           <Button
             stepIsValid={stepIsValid}
