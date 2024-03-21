@@ -1,19 +1,20 @@
 import './ProgressBar.css'
-import { useLocation } from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
+import { useState } from 'react'
 // import { useState } from 'react';
 import progressLineActive from '../../images/progress-line-active.svg'
 import progressLineDisabled from '../../images/progress-line-disabled.svg'
 
 function ProgressBar() {
-  // const [progress, setProgress] = useState(0);
 
-  // const handleClick = () => {
-  // };
   let { pathname } = useLocation();
+
+    //пока что костыль, когда сделаем логику, будем брать из useFrom
+    const [stepIsActivated, setStepIsActivated] = useState(false);
 
   return (
     <section className='progress-bar'>
-      <h2 className='progress-bar__title'>Создание заявки</h2>
+      <h2 className='progress-bar__title'>{pathname === '/formsubmit' ? 'Конец заявки' : 'Создание заявки'}</h2>
       <nav className='progress-bar__menu'>
         <ul className='progress-bar__links'>
           {pathname === '/jobdescription' ||
@@ -26,20 +27,33 @@ function ProgressBar() {
             pathname === '/jobdescription/employmenttype' ||
             pathname === '/jobdescription/businesstrips' ||
             pathname === '/jobdescription/subordinatesnumber' ||
-            pathname === '/jobdescription/jobpeculiarities'
+            pathname === '/jobdescription/jobpeculiarities' ||
 
-            ? < li className='progress-bar__link progress-bar__link_active'
-            // onClick={() => handleClick(0)}
-            >
-              <div className='progress-bar__step'>
+            pathname === '/candidaterequirements/yearsofexperience' ||
+            pathname === '/candidaterequirements/skills' ||
+            pathname === '/candidaterequirements/education' ||
+            pathname === '/candidaterequirements/portfolio' ||
+
+            pathname === '/workingconditions/numberofvacancies' ||
+            pathname === '/workingconditions/typesofreward' ||
+            pathname === '/workingconditions/moneyforrecruiters' ||
+            pathname === '/workingconditions/candidatefirstworkingday' ||
+            pathname === '/workingconditions/interview' ||
+            pathname === '/workingconditions/firstinterviewdate' ||
+
+            pathname === '/recruiterrequirements/recruitersnumber' ||
+            pathname === '/recruiterrequirements/recruiterstasks' ||
+            pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formsubmit' ||
+            stepIsActivated
+
+            ? < li className='progress-bar__link progress-bar__link_active'>
+              <NavLink to='/jobdescription/sphere' className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
-              </div>
-              Опишите вакансию
+                Опишите вакансию</NavLink>
             </li>
 
-            : < li className='progress-bar__link'
-            // onClick={() => handleClick(0)}
-            >
+            : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
               </div>
@@ -49,20 +63,28 @@ function ProgressBar() {
           {pathname === '/candidaterequirements/yearsofexperience' ||
             pathname === '/candidaterequirements/skills' ||
             pathname === '/candidaterequirements/education' ||
-            pathname === '/candidaterequirements/portfolio'
+            pathname === '/candidaterequirements/portfolio' ||
 
-            ? < li className='progress-bar__link progress-bar__link_active'
-            // onClick={() => handleClick(0)}
-            >
-              <div className='progress-bar__step'>
+            pathname === '/workingconditions/numberofvacancies' ||
+            pathname === '/workingconditions/typesofreward' ||
+            pathname === '/workingconditions/moneyforrecruiters' ||
+            pathname === '/workingconditions/candidatefirstworkingday' ||
+            pathname === '/workingconditions/interview' ||
+            pathname === '/workingconditions/firstinterviewdate' ||
+
+            pathname === '/recruiterrequirements/recruitersnumber' ||
+            pathname === '/recruiterrequirements/recruiterstasks' ||
+            pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formsubmit' ||
+            stepIsActivated
+
+            ? < li className='progress-bar__link progress-bar__link_active'>
+              <NavLink to='/candidaterequirements/yearsofexperience' className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
-              </div>
-              Требования к кандидату
+                Требования к кандидату</NavLink>
             </li>
 
-            : < li className='progress-bar__link'
-            // onClick={() => handleClick(0)}
-            >
+            : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
               </div>
@@ -74,20 +96,21 @@ function ProgressBar() {
             pathname === '/workingconditions/moneyforrecruiters' ||
             pathname === '/workingconditions/candidatefirstworkingday' ||
             pathname === '/workingconditions/interview' ||
-            pathname === '/workingconditions/firstinterviewdate'
+            pathname === '/workingconditions/firstinterviewdate' ||
 
-            ? < li className='progress-bar__link progress-bar__link_active'
-            // onClick={() => handleClick(0)}
-            >
-              <div className='progress-bar__step'>
+            pathname === '/recruiterrequirements/recruitersnumber' ||
+            pathname === '/recruiterrequirements/recruiterstasks' ||
+            pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formsubmit' ||
+            stepIsActivated
+
+            ? < li className='progress-bar__link progress-bar__link_active'>
+              <NavLink to='/workingconditions/numberofvacancies' className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
-              </div>
-              Условия работы
+                Условия работы</NavLink>
             </li>
 
-            : < li className='progress-bar__link'
-            // onClick={() => handleClick(0)}
-            >
+            : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
               </div>
@@ -97,20 +120,17 @@ function ProgressBar() {
 
           {pathname === '/recruiterrequirements/recruitersnumber' ||
             pathname === '/recruiterrequirements/recruiterstasks' ||
-            pathname === '/recruiterrequirements/recruiterspeculiarities'
+            pathname === '/recruiterrequirements/recruiterspeculiarities' ||
+            pathname === '/formsubmit'  ||
+            stepIsActivated
 
-            ? < li className='progress-bar__link progress-bar__link_active'
-            // onClick={() => handleClick(0)}
-            >
-              <div className='progress-bar__step'>
+            ? < li className='progress-bar__link progress-bar__link_active'>
+              <NavLink to='/recruiterrequirements/recruitersnumber' className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
-              </div>
-              Требования к рекрутеру
+                Требования к рекрутеру</NavLink>
             </li>
 
-            : < li className='progress-bar__link'
-            // onClick={() => handleClick(0)}
-            >
+            : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
                 <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
               </div>

@@ -19,6 +19,7 @@ function StepSubordinatesNumber() {
 
   return (
     <>
+          <div className='subordinates-number__container'>
       <div className='subordinates__container'>
         <input
           className="subordinates__input"
@@ -28,9 +29,7 @@ function StepSubordinatesNumber() {
           onChange={handleInputChange}
           placeholder="Сотрудников в подчинении"
         />
-
-        <div className='subordinates__button'>
-
+        <div className='subordinates-number__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}

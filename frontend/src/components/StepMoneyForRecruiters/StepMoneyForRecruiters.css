@@ -1,0 +1,8 @@
+.money-recruiters__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.money-recruiters__button {
+  margin: 200px 0 0 300px;
+}

@@ -11,12 +11,22 @@
 
 label {
   display: block;
-  color: var(--Gray-80, #303233);
+  color: #303233;
+  margin: 65px 0 0 176px;
+}
+
+.office-remote__radiobuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-remote__error {
+  color: #EC3C3C;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 164%;
+  line-height: 24px;
   margin-bottom: 10px;
 }
 
@@ -24,6 +34,8 @@ input[type="radio"] {
   margin-right: 5px;
   width: 24px;
   height: 24px;
+  line-height: 24px;
+  margin: 0 0 0 15px;
 }
 
 .office-remote__button {

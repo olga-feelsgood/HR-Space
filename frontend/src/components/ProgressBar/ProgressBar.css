@@ -49,5 +49,14 @@
 }
 
 .progress-bar__step {
+  text-decoration: none;
+  color: #71A2FF;
+}
+
+.progress-bar__step:visited {
+  color: #71A2FF;
+}
+
+.progress-bar__line {
   margin-bottom: 12px;
 }

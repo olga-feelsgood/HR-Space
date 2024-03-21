@@ -1,0 +1,8 @@
+.interview-date__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.interview-date__button {
+  margin: 200px 0 0 300px;
+}

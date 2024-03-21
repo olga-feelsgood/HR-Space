@@ -24,6 +24,7 @@ function StepJobPeculiarities() {
 
   return (
     <>
+          <div className='job-peculiarities__container'>
       <div className='subordinates__container'>
         <input
           className="subordinates__input"
@@ -37,8 +38,7 @@ function StepJobPeculiarities() {
         />
         <div style={{ width: `${progress}%` }}></div>
         <div className="character-count">{text.length}/{maxLength}</div>
-        <div className='subordinates__button'>
-
+               <div className='job-peculiarities__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
@@ -46,7 +46,7 @@ function StepJobPeculiarities() {
             buttonType='button'
           />
         </div>
-      </div>
+</div>
     </>
   )
 }

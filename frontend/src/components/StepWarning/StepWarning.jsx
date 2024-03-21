@@ -10,16 +10,20 @@ function StepWarning() {
   const onRedirect = () => navigate('/jobdescription/sphere');
 
   return (
-    <section className="warning__section">
+
+      <div className='warning__container'>
       <h1 className="warning__title">Заполните все поля заявки максимально подробно.</h1>
       <p className="warning__text">Это поможет ускорить процесс поиска кандидата
         и сделает его максимально релевантным вашему запросу.</p>
-      <Button
-        onClick={onRedirect}
-        stepIsValid={stepIsValid}
-        buttonTitle='Далее'
-        buttonType='button' />
-    </section>
+        <div className='warning__button'>
+          <Button
+            onClick={onRedirect}
+            stepIsValid={stepIsValid}
+            buttonTitle='Далее'
+            buttonType='button'
+          />
+    </div>
+  </div>
   )
 }
 

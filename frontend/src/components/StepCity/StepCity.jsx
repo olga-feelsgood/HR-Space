@@ -25,7 +25,6 @@ function StepCity() {
   return (
     <>
       <div className='city__container'>
-
         <input
           className="city__input"
           type="text"

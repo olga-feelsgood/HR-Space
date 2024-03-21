@@ -12,10 +12,11 @@ function StepHome() {
   const onRedirect = () => navigate('/jobdescription/warning');
 
   return (
-    <section className="stephome">
-      <h1 className="stephome__title">Название вакансии</h1>
+          <div className='home__container'>
+    <div className="stephome">
+      <h1 className="home__title">Название вакансии</h1>
       <input
-        className="stephome__input"
+        className="home__input"
         type="text"
         value={values.vacancyName}
         onChange={handleChange}
@@ -23,13 +24,19 @@ function StepHome() {
         placeholder="Введите название вакансии"
       />
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      <Button
-        onClick={onRedirect}
-        stepIsValid={stepIsValid}
-        buttonTitle='Далее'
-        buttonType='button' />
-    </section>
-  );
+</div>
+ 
+        <div className='home__button'>
+          <Button
+            onClick={onRedirect}
+            stepIsValid={stepIsValid}
+            buttonTitle='Далее'
+            buttonType='button'
+          />
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default StepHome;

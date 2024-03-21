@@ -27,6 +27,7 @@ function StepSphere() {
   };
 
   return (
+
     <div className='sphere__container'>
 
       <input
@@ -129,15 +130,17 @@ function StepSphere() {
         <p> </p>
       </div>
       <div className='sphere__button'>
-        <Button
-          onClick={onRedirect}
-          stepIsValid={stepIsValid}
-          buttonTitle='Далее'
-          buttonType='button'
-        />
+          <Button
+            onClick={onRedirect}
+            stepIsValid={stepIsValid}
+            buttonTitle='Далее'
+            buttonType='button'
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-export default StepSphere;
+export default StepSphere
+

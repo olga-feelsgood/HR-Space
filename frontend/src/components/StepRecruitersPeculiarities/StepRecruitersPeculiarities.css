@@ -1,0 +1,14 @@
+.recruiters-peculiarities__container {
+  display: flex;
+  flex-direction: column;
+  margin: 76px 0 0 176px;
+}
+
+.recruiters-peculiarities__checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruiters-peculiarities__button {
+  margin: 200px 0 0 300px;
+}

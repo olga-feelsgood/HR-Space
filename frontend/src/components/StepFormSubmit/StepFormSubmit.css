@@ -1,8 +1,8 @@
-.skills__container {
+.form-submit__container {
   display: flex;
   flex-direction: column;
 }
 
-.skills__button {
+.form-submit__button {
   margin: 200px 0 0 300px;
 }

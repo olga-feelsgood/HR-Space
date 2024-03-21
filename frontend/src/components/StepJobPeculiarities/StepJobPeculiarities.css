@@ -36,3 +36,12 @@
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
+
+.job-peculiarities__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-peculiarities__button {
+  margin: 200px 0 0 300px;
+}

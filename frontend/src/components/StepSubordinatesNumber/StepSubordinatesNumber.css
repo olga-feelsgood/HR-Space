@@ -1,3 +1,4 @@
+
 .subordinates__container {
   display: flex;
   flex-direction: column;
@@ -17,4 +18,13 @@
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
   margin-bottom: 20px;
+}
+
+.subordinates-number__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subordinates-number__button {
+  margin: 200px 0 0 300px;
 }

@@ -18,7 +18,7 @@ function StepSalary() {
 
   return (
     <>
-      <div className='office-remote__container'>
+      <div className='salary__container'>
         <h1 className="salary__title">Заработная плата до вычета НДФЛ</h1>
         <div className="salary__inputs">
           <input
@@ -39,7 +39,7 @@ function StepSalary() {
           />
           <p className="salary__text">₽</p>
         </div>
-        <div className='office-remote__button'>
+        <div className='salary__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
