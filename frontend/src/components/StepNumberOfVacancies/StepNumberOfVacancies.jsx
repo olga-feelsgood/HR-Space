@@ -2,6 +2,7 @@ import './StepNumberOfVacancies.css'
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 
 function StepNumberOfVacancies() {
@@ -30,7 +31,7 @@ function StepNumberOfVacancies() {
             onChange={handleInputChange}
             placeholder="Введите число сотрудников для поиска"
           />
-
+          <CurrentApplicationBox />
         </div>
         <div className='number-vacancies__button'>
           <Button
