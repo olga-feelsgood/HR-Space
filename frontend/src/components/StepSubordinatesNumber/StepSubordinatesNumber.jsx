@@ -1,20 +1,34 @@
-import './StepSubordinatesNumber.css'
+import './StepSubordinatesNumber.css';
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 function StepSubordinatesNumber() {
+
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/jobpeculiarities');
+  const onRedirect = () => navigate('/jobdescription/workinghours');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
 
   return (
     <>
-      <div className='subordinates-number__container'>
-        <div> StepSubordinatesNumber</div>
+          <div className='subordinates-number__container'>
+      <div className='subordinates__container'>
+        <input
+          className="subordinates__input"
+          type="text"
+          name="the begin of the workday"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="Сотрудников в подчинении"
+        />
         <div className='subordinates-number__button'>
           <Button
             onClick={onRedirect}

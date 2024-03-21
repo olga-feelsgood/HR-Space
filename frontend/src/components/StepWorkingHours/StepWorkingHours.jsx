@@ -8,14 +8,39 @@ import { useNavigate } from 'react-router-dom'
 function StepWorkingHours() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [inputValue, setInputValue] = useState('');
   const [errorMessage, setErrorMessage] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/employmenttype');
 
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+
   return (
     <>
       <div className='working-hours__container'>
+        <div className="working-hours__inputs">
+          <input
+            className="working-hours__input"
+            type="text"
+            name="the begin of the workday"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Начало рабочего дня"
+          />
+          <input
+            className="working-hours__input"
+            type="text"
+            name="the end of the worday"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Конец рабочего дня"
+          />
+        </div>
+
         <div className='working-hours__radiobuttons'>
           <RadioButton
             radioLabel='full_day'

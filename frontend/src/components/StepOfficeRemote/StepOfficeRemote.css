@@ -1,6 +1,17 @@
 .office-remote__container {
   display: flex;
+  max-width: 208px;
+  margin-top: 48px;
+  margin-left: 135px;
+  column-gap: 23px;
   flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  color: #303233;
   margin: 65px 0 0 176px;
 }
 
@@ -16,9 +27,23 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
   margin: 0 0 0 15px;
 }
 
 .office-remote__button {
   margin: 200px 0 0 300px;
+}
+
+.form__current {
+  margin-top: 150px;
+  width: 780px;
+  padding: 20px;
 }
