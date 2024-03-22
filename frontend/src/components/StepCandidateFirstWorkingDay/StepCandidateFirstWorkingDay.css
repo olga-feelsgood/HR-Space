@@ -4,11 +4,7 @@
   margin-left: 150px;
 }
 
-.candidate-firstday__picker {
-  position: relative;
-  width: 320px;
-  height: 48px;
-  margin-top: 60px;
+.candidate-firstday__input {
   display: flex;
   width: 320px;
   height: 48px;
@@ -20,7 +16,7 @@
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
   margin-top: 60px;
-  cursor: pointer;
+  margin-bottom: 5px;
 }
 
 ::placeholder {
