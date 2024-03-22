@@ -3,12 +3,14 @@ import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepRecruitersNumber() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
+  const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/recruiterrequirements/recruiterstasks');
@@ -19,22 +21,28 @@ function StepRecruitersNumber() {
         <p className='recruiters-number__text'>Укажите количество рекрутеров, которые будут работать над заявкой:</p>
         <div className='recruiters-number__radiobuttons'>
           <RadioButton
-            radioLabel='one'
+            radioLabel='1'
             radioTitle='1'
-            radioValue='one'
-            radioName='hr_requirements'//от бэка
+            radioValue='1'
+            radioName='amount_of_hr'//от бэка
+            checked={data.amount_of_hr == '1' ? true : false} //от бэка
+            onChange={handleChange}
           />
           <RadioButton
-            radioLabel='two'
+            radioLabel='2'
             radioTitle='2'
-            radioValue='two'
-            radioName='hr_requirements'//от бэка
+            radioValue='2'
+            radioName='amount_of_hr'//от бэка
+            checked={data.amount_of_hr == '2' ? true : false} //от бэка
+            onChange={handleChange}
           />
           <RadioButton
-            radioLabel='three'
+            radioLabel='3'
             radioTitle='3'
-            radioValue='three'
-            radioName='hr_requirements'//от бэка
+            radioValue='3'
+            radioName='amount_of_hr'//от бэка
+            checked={data.amount_of_hrn == '3' ? true : false} //от бэка
+            onChange={handleChange}
           />
         </div>
         {errorMessage && <p className='recruiters-number__error'>Ничего не выбрано</p>}

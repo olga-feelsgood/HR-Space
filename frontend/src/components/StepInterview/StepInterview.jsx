@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
 function StepInterview() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
@@ -19,16 +21,20 @@ function StepInterview() {
         <p className='interview__text'>Укажите, с какими кандидатами Вы бы хотели проводить собеседования самостоятельно:</p>
       <div className='interview__radiobuttons'>
           <RadioButton
-            radioLabel='all_relevant'
+            radioLabel='1'
             radioTitle='Со всеми кандидатами, чьё резюме будет релевантным'
-            radioValue='all_relevant'
+            radioValue='1'
             radioName='format_interview'//от бэка
+            checked={data.format_interview == '1' ? true : false} //от бэка
+            onChange={handleChange}
           />
           <RadioButton
-            radioLabel='pre_interview'
+            radioLabel='2'
             radioTitle='С кандидатами, прошедшими предварительный отбор'
-            radioValue='pre_intervie'
+            radioValue='2'
             radioName='format_interview'//от бэка
+            checked={data.format_interview == '2' ? true : false} //от бэка
+            onChange={handleChange}
           />
         </div>
         {errorMessage && <p className='interview__error'>Ничего не выбрано</p>}
