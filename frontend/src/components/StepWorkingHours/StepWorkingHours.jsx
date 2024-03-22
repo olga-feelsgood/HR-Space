@@ -8,14 +8,20 @@ import { useNavigate } from 'react-router-dom'
 function StepWorkingHours() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
+  const [beginValue, setBeginValue] = useState('');
+  const [endValue, setEndValue] = useState('');
   const [errorMessage, setErrorMessage] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/employmenttype');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const handleBeginChange = (event) => {
+    setBeginValue(event.target.value);
+  };
+
+
+  const handleEndChange = (event) => {
+    setEndValue(event.target.value);
   };
 
 
@@ -27,16 +33,16 @@ function StepWorkingHours() {
             className="working-hours__input"
             type="text"
             name="the begin of the workday"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={beginValue}
+            onChange={handleBeginChange}
             placeholder="Начало рабочего дня"
           />
           <input
             className="working-hours__input"
             type="text"
             name="the end of the worday"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={endValue}
+            onChange={handleEndChange}
             placeholder="Конец рабочего дня"
           />
         </div>
