@@ -11,14 +11,12 @@ function StepCity() {
   //примерно список для проверки
   const cities = ['Москва', 'Тверь', 'Санкт-Петербург', 'Екатеринбург', 'Cамара', 'Челябинск', 'Владивосток'];
 
-  const { errorMessage } = useForm({ line_of_business: '' });
+  // тут используем хук useForm
+  const { errorMessage, handleSubmit } = useForm({ cityName: '' });
+  const [inputValue, setInputValue] = useState(''); // объявляем состояние для input
 
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
-  // const [errorMessage, setErrorMessage] = useState(true);
+  const navigate = useNavigate();
 
-  let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/officeremote');
 
   const handleInputChange = (event) => {
@@ -44,13 +42,12 @@ function StepCity() {
           <option key={index} value={city} />
         ))}
       </datalist>
-      <span className='city__error'>{errorMessage}</span>
-      {/* {errorMessage && <span className='city__error'>Ничего не выбрано</span>} */}
+      {errorMessage && <span className='city__error'>{errorMessage}</span>}
       <div className='city__current'><CurrentApplicationBox /></div>
       <div className='city__button'>
         <Button
           onClick={onRedirect}
-          stepIsValid={stepIsValid}
+          stepIsValid={handleSubmit}
           buttonTitle='Далее'
           buttonType='button'
         />
