@@ -17,36 +17,36 @@ function StepSalary() {
   };
 
   return (
-      <div className='salary__container'>
-        <h1 className="salary__title">Заработная плата до вычета НДФЛ</h1>
-        <div className="salary__inputs">
-          <input
-            className="salary__input"
-            type="text"
-            name="from"
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder="От"
-          />
-          <input
-            className="salary__input"
-            type="text"
-            name="to"
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder="До"
-          />
-          <p className="salary__text">₽</p>
-        </div>
-        <div className='salary__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
+    <div className='salary__container'>
+      <h1 className="salary__title">Заработная плата до вычета НДФЛ</h1>
+      <div className="salary__inputs">
+        <input
+          className="salary__input"
+          type="text"
+          name="from"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="От"
+        />
+        <input
+          className="salary__input"
+          type="text"
+          name="to"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="До"
+        />
+        <span className="salary__text">₽</span>
       </div>
+      <div className='salary__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
+    </div>
   )
 }
 
