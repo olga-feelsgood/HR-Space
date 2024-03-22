@@ -3,7 +3,7 @@ import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepInterview() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom

@@ -2,29 +2,27 @@ import './StepSubordinatesNumber.css';
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useForm  from '../../hooks/useForm';
 
 function StepSubordinatesNumber() {
 
+  const{data, handleChange} =useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
-  const onRedirect = () => navigate('/jobdescription/jobpeculiarities');
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
+  const onRedirect = () => navigate('/jobdescription/jobpeculiarities')
 
   return (
     <div className='subordinates-number__container'>
         <input
           className="subordinates-number__input"
           type="text"
-          name="the begin of the workday"
-          value={inputValue}
-          onChange={handleInputChange}
+          name="amount_of_subordinate"
+          value={data.amount_of_subordinate || ''}
+          onChange={handleChange}
           placeholder="Сотрудников в подчинении"
         />
         <div className='subordinates-number__button'>

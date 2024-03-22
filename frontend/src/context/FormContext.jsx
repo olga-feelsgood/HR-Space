@@ -35,15 +35,11 @@ export const FormProvider = ({ children }) => {
   })
 
 
-
   const handleChange = e => {
-    const type = e.target.type
 
     const name = e.target.name
 
-    const value = type === "radio"
-        ? e.target.checked
-        : e.target.value
+    const value = e.target.value
 
     setData(prevData => ({
         ...prevData,

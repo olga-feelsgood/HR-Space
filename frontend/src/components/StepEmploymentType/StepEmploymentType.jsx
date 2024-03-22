@@ -22,28 +22,32 @@ function StepEmploymentType() {
             radioLabel='full'
             radioTitle='Полная'
             radioValue='full'
-            checked= {data.type_employment ='full'} //от бэка
+            checked={data.type_employment == 'full' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='partial'
             radioTitle='Частичная'
             radioValue='partial'
-            checked= {data.type_employment ='partial'} //от бэка
+            checked={data.type_employment == 'partial' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='project'
             radioTitle='Проектная'
             radioValue='project'
-            checked= {data.type_employment ='project'} //от бэка
+            checked={data.type_employment == 'project' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='internship'
             radioTitle='Стажировка'
             radioValue='internship'
-            checked= {data.type_employment ='internship'} //от бэка
+            checked={data.type_employment == 'internship' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
         </div>

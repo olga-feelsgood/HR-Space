@@ -21,7 +21,7 @@ function StepSalary() {
           <input
             className="salary__input"
             type="text"
-            name="from"
+            name="salary_from"
             value={data.salary_from}
             onChange={handleChange}
             placeholder="От"
@@ -29,7 +29,7 @@ function StepSalary() {
           <input
             className="salary__input"
             type="text"
-            name="to"
+            name="salary_to"
             value={data.salary_to}
             onChange={handleChange}
             placeholder="До"

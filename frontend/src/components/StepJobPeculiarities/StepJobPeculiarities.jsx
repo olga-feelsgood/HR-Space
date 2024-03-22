@@ -2,23 +2,21 @@ import './StepJobPeculiarities.css';
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useForm from '../../hooks/useForm';
 
 function StepJobPeculiarities() {
 
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
 
   const [text, setText] = useState('');
   const maxLength = 100;
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/candidaterequirements/yearsofexperience');
-
-
-  const handleChange = (event) => {
-    setText(event.target.value);
-  };
 
   const progress = (text.length / maxLength) * 1000;
 
@@ -28,8 +26,8 @@ function StepJobPeculiarities() {
         <input
           className="job-peculiarities__input"
           type="text"
-          name="paragraph"
-          value={inputValue}
+          name="features_vacancy"
+          value={data.features_vacancy}
           onChange={handleChange}
           maxLength={maxLength}
           placeholder="Например, Вы ищете сотрудника для 

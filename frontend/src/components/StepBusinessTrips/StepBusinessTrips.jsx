@@ -23,21 +23,24 @@ function StepBusinessTrips() {
             radioLabel='yes'
             radioTitle='Да'
             radioValue='yes'
-            checked= {data.business_trip ='yes'} //от бэка
+            checked={data.business_trip == 'yes' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='business_trip'//от бэка
           />
           <RadioButton
             radioLabel='no'
             radioTitle='Нет'
             radioValue='no'
-            checked= {data.business_trip ='no'} //от бэка
+            checked={data.business_trip == 'no' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='business_trip'//от бэка
           />
           <RadioButton
             radioLabel='sometimes'
             radioTitle='Иногда'
             radioValue='sometimes'
-            checked= {data.business_trip ='sometimes'} //от бэка
+            checked={data.business_trip == 'sometimes' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='business_trip'//от бэка
           />
         </div>

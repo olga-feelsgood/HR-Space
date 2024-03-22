@@ -22,7 +22,7 @@ function StepWorkingHours() {
           <input
             className="working-hours__input"
             type="text"
-            name="the begin of the workday"
+            name="start_work_day"
             value={data.start_work_day}
             onChange={handleChange}
             placeholder="Начало рабочего дня"
@@ -30,7 +30,7 @@ function StepWorkingHours() {
           <input
             className="working-hours__input"
             type="text"
-            name="the end of the worday"
+            name="end_work_day"
             value={data.end_work_day}
             onChange={handleChange}
             placeholder="Конец рабочего дня"
@@ -42,28 +42,32 @@ function StepWorkingHours() {
             radioLabel='full_day'
             radioTitle='Полный день'
             radioValue='full_day'
-            checked= {data.schedule ='full_day'} //от бэка
+            checked={data.schedule == 'full_day' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='schedule'//от бэка
           />
           <RadioButton
-            radioLabel='flexible_schedule'
+            radioLabel='flexible schedule'
             radioTitle='Гибкий график'
-            radioValue='flexible_schedule'
-            checked= {data.schedule ='flexible schedule'} //от бэка
+            radioValue='flexible schedule'
+            checked={data.schedule == 'flexible schedule' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='schedule'//от бэка
           />
           <RadioButton
-            radioLabel='shift_work'
+            radioLabel='shift work'
             radioTitle='Сменный график'
-            radioValue='shift_work'
-            checked= {data.schedule ='shift work'} //от бэка
+            radioValue='shift work'
+            checked={data.schedule == 'shift work' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='schedule'//от бэка
           />
           <RadioButton
             radioLabel='watch'
             radioTitle='Вахтовый метод'
             radioValue='watch'
-            checked= {data.schedule ='watch'} //от бэка
+            checked={data.schedule == 'watch' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='schedule'//от бэка
           />
         </div>

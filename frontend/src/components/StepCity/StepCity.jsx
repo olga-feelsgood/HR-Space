@@ -28,7 +28,7 @@ function StepCity() {
       <input
         className='city__input city__input_error'
         type='text'
-        name='cityName'
+        name='city'
         list='cities'
         value={data.city || ''}
         onChange={handleChange}

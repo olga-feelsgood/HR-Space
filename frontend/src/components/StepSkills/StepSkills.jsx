@@ -5,12 +5,14 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepSkills() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/candidaterequirements/education');
@@ -24,9 +26,6 @@ function StepSkills() {
     console.log('Вы удалили чипс');
   };
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
 
   return (
     <div className='skills__container'>
@@ -34,9 +33,9 @@ function StepSkills() {
       <input
         className="skills__input"
         type="text"
-        name="skillsName"
-        value={inputValue}
-        onChange={handleInputChange}
+        name="skill"
+        value={data.skill}
+        onChange={handleChange}
         placeholder="Введите навык"
       />
 

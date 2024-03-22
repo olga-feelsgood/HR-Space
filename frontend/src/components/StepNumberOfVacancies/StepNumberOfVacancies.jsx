@@ -3,12 +3,14 @@ import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
-
+import useForm from '../../hooks/useForm';
 
 function StepNumberOfVacancies() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/workingconditions/typesofreward');
@@ -25,10 +27,9 @@ function StepNumberOfVacancies() {
           <input
             className="number-vacancies__input"
             type="text"
-            name="cityName"
-            list="cities"
-            value={inputValue}
-            onChange={handleInputChange}
+            name="amount_of_employees"
+            value={data.amount_of_employees}
+            onChange={handleChange}
             placeholder="Введите число сотрудников для поиска"
           />
           <CurrentApplicationBox />
