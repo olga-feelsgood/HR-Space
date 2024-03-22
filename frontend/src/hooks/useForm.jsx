@@ -1,12 +1,8 @@
-import { useState } from "react";
+import { useContext } from 'react'
+import FormContext from '../context/FormContext.jsx'
 
-export function useForm(inputValues) {
-    const [values, setValues] = useState(inputValues);
-
-    const handleChange = (event) => {
-        const { value, name } = event.target;
-        setValues({ ...values, [name]: value });
-    };
-
-    return { values, handleChange, setValues };
+const useFormContext = () => {
+    return useContext(FormContext)
 }
+
+export default useFormContext

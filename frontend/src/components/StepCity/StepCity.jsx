@@ -4,26 +4,24 @@ import search from '../../images/search.svg';
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useForm } from '../../hooks/useForm';
+import useForm from '../../hooks/useForm';
 
 
 function StepCity() {
+
+  const{data, handleChange} =useForm();
+
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
+  const [stepIsValid, setStepIsValid] = useState(true);
+
   //примерно список для проверки
   const cities = ['Москва', 'Тверь', 'Санкт-Петербург', 'Екатеринбург', 'Cамара', 'Челябинск', 'Владивосток'];
 
-  const { errorMessage } = useForm({ line_of_business: '' });
-
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
-  // const [errorMessage, setErrorMessage] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/officeremote');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
 
   return (
     <div className='city__container'>
@@ -32,8 +30,8 @@ function StepCity() {
         type='text'
         name='cityName'
         list='cities'
-        value={inputValue}
-        onChange={handleInputChange}
+        value={data.city || ''}
+        onChange={handleChange}
         placeholder='Введите название города'
       />
       <datalist

@@ -4,12 +4,25 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepOfficeRemote() {
+
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
+  const [stepIsValid, setStepIsValid] = useState(true);
+
+  const [topping, setTopping] = useState('');
+
+  const onOptionChange = (e) => {
+    setTopping(e.target.value);
+    console.log(topping)
+  }
+
+
+console.log(topping)
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/salary');
@@ -22,18 +35,31 @@ function StepOfficeRemote() {
             radioLabel='remote'
             radioTitle='Удалённая'
             radioValue='remote'
+            onChange={onOptionChange}
+            checked={topping === 'remote'}
             radioName='work_format'//от бэка
           />
           <RadioButton
             radioLabel='mixed'
             radioTitle='Гибрид'
             radioValue='mixed'
+            onChange={onOptionChange}
+            // onChange={handleChange}
+            // checked={data.work_format === 'mixed'}
+            checked={topping === 'mixed'}
+            // onChange={handleChange}
+            // checked= {data.work_format.office} //от бэка
             radioName='work_format'//от бэка
           />
           <RadioButton
             radioLabel='office'
             radioTitle='Офис'
             radioValue='office'
+            onChange={onOptionChange}
+            checked={topping === 'office'}
+            // onChange={handleChange}
+            // checked={data.work_format}
+            // checked= {data.work_format='office'} //от бэка
             radioName='work_format'//от бэка
           />
         </div>

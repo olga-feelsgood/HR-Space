@@ -2,19 +2,17 @@ import './StepSalary.css'
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm  from '../../hooks/useForm';
 
 function StepSalary() {
+  const{data, handleChange} =useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/workinghours');
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
 
   return (
       <div className='salary__container'>
@@ -24,16 +22,16 @@ function StepSalary() {
             className="salary__input"
             type="text"
             name="from"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={data.salary_from}
+            onChange={handleChange}
             placeholder="От"
           />
           <input
             className="salary__input"
             type="text"
             name="to"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={data.salary_to}
+            onChange={handleChange}
             placeholder="До"
           />
           <p className="salary__text">₽</p>

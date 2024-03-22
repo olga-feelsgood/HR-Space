@@ -3,21 +3,17 @@ import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import useForm from '../../hooks/useForm';
 
 function StepWorkingHours() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
   const [errorMessage, setErrorMessage] = useState(true);
+  const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/employmenttype');
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
 
   return (
     <>
@@ -27,16 +23,16 @@ function StepWorkingHours() {
             className="working-hours__input"
             type="text"
             name="the begin of the workday"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={data.start_work_day}
+            onChange={handleChange}
             placeholder="Начало рабочего дня"
           />
           <input
             className="working-hours__input"
             type="text"
             name="the end of the worday"
-            value={inputValue}
-            onChange={handleInputChange}
+            value={data.end_work_day}
+            onChange={handleChange}
             placeholder="Конец рабочего дня"
           />
         </div>
@@ -46,24 +42,28 @@ function StepWorkingHours() {
             radioLabel='full_day'
             radioTitle='Полный день'
             radioValue='full_day'
+            checked= {data.schedule ='full_day'} //от бэка
             radioName='schedule'//от бэка
           />
           <RadioButton
             radioLabel='flexible_schedule'
             radioTitle='Гибкий график'
             radioValue='flexible_schedule'
+            checked= {data.schedule ='flexible schedule'} //от бэка
             radioName='schedule'//от бэка
           />
           <RadioButton
             radioLabel='shift_work'
             radioTitle='Сменный график'
             radioValue='shift_work'
+            checked= {data.schedule ='shift work'} //от бэка
             radioName='schedule'//от бэка
           />
           <RadioButton
             radioLabel='watch'
             radioTitle='Вахтовый метод'
             radioValue='watch'
+            checked= {data.schedule ='watch'} //от бэка
             radioName='schedule'//от бэка
           />
         </div>

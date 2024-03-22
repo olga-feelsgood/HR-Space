@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StepHome.css'
-import { useForm } from '../../hooks/useForm';
+import useForm from '../../hooks/useForm';
 import Button from '../Button/Button';
 
 function StepHome() {
-  const { values, handleChange, errorMessage } = useForm({ name: '' });
+
+  const { data, handleChange } = useForm();
+  // console.log(JSON.stringify(data));
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/warning');
@@ -18,7 +22,7 @@ function StepHome() {
         <input
           className='home__input home__input_error'
           type='text'
-          value={values.vacancyName}
+          value={data.name || ''}
           onChange={handleChange}
           name='name'
           placeholder="Введите название вакансии"
