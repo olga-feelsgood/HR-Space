@@ -11,16 +11,17 @@ function StepCity() {
   //примерно список для проверки
   const cities = ['Москва', 'Тверь', 'Санкт-Петербург', 'Екатеринбург', 'Cамара', 'Челябинск', 'Владивосток'];
 
-  // тут используем хук useForm
   const { errorMessage, handleSubmit } = useForm({ cityName: '' });
-  const [inputValue, setInputValue] = useState(''); // объявляем состояние для input
+  const [cityValue, setCityValue] = useState('');
 
   const navigate = useNavigate();
 
   const onRedirect = () => navigate('/jobdescription/officeremote');
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    const selectedCity = event.target.value;
+    console.log('Город:', selectedCity);
+    setCityValue(selectedCity);
   };
 
   return (
@@ -30,7 +31,7 @@ function StepCity() {
         type='text'
         name='cityName'
         list='cities'
-        value={inputValue}
+        value={cityValue}
         onChange={handleInputChange}
         placeholder='Введите название города'
       />
