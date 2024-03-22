@@ -10,30 +10,28 @@ import 'react-datepicker/dist/react-datepicker.css';
 function StepFirstInterviewDate() {
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [dateValue, setDateValue] = useState('');
+
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/recruiterrequirements/recruitersnumber');
 
-  // const handleDateChange = (date) => {
-  //   setSelectedDate(date);
-  // };
+  const handleDateChange = event => {
+    dateValue(event.target.value);
+  };
 
   return (
     <>
       <div className='interview-date__container'>
         <div>
-          <DatePicker
-            showIcon
-            toggleCalendarOnIconClick
-            selected={selectedDate}
-            placeholderText="Выберите дату"
-            className="interview-date__picker"
-            onChange={(date) => setSelectedDate(date)}
+          <input
+            className='interview-date__input'
+            type='text'
+            name='date'
+            value={dateValue}
+            onChange={handleDateChange}
+            placeholder='ДД.ММ.ГГГГ'
           />
-          {/* <img
-            className="calendar__icon"
-            src={calendar} alt="Календарь" /> */}
         </div>
         <div className='interview-date__button'>
           <Button
