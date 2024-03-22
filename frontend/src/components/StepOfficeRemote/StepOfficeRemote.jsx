@@ -17,12 +17,11 @@ function StepOfficeRemote() {
   const [topping, setTopping] = useState('');
 
   const onOptionChange = (e) => {
-    setTopping(e.target.value);
-    console.log(topping)
+    const target = e.target;
+    setTopping(target.value)
   }
 
-
-console.log(topping)
+  console.log(`topping: ${topping}`)
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/salary');
@@ -36,7 +35,7 @@ console.log(topping)
             radioTitle='Удалённая'
             radioValue='remote'
             onChange={onOptionChange}
-            checked={topping === 'remote'}
+            checked={topping == 'remote'? true : false}
             radioName='work_format'//от бэка
           />
           <RadioButton
@@ -46,7 +45,7 @@ console.log(topping)
             onChange={onOptionChange}
             // onChange={handleChange}
             // checked={data.work_format === 'mixed'}
-            checked={topping === 'mixed'}
+            checked={topping == 'mixed'? true : false}
             // onChange={handleChange}
             // checked= {data.work_format.office} //от бэка
             radioName='work_format'//от бэка
@@ -56,7 +55,7 @@ console.log(topping)
             radioTitle='Офис'
             radioValue='office'
             onChange={onOptionChange}
-            checked={topping === 'office'}
+            checked={topping == 'office'? true : false}
             // onChange={handleChange}
             // checked={data.work_format}
             // checked= {data.work_format='office'} //от бэка
