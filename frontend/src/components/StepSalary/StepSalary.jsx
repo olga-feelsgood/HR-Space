@@ -3,17 +3,21 @@ import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 function StepSalary() {
-  //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
+  const [fromValue, setFromValue] = useState('');
+  const [toValue, setToValue] = useState('');
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
   const onRedirect = () => navigate('/jobdescription/workinghours');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const handleFromChange = event => {
+    setFromValue(event.target.value);
+  };
+
+  const handleToChange = event => {
+    setToValue(event.target.value);
   };
 
   return (
@@ -24,16 +28,16 @@ function StepSalary() {
           className="salary__input"
           type="text"
           name="from"
-          value={inputValue}
-          onChange={handleInputChange}
+          value={fromValue}
+          onChange={handleFromChange}
           placeholder="От"
         />
         <input
           className="salary__input"
           type="text"
           name="to"
-          value={inputValue}
-          onChange={handleInputChange}
+          value={toValue}
+          onChange={handleToChange}
           placeholder="До"
         />
         <span className="salary__text">₽</span>
@@ -47,7 +51,7 @@ function StepSalary() {
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default StepSalary
+export default StepSalary;
