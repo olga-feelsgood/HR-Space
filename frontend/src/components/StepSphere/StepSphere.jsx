@@ -5,14 +5,15 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useForm } from '../../hooks/useForm';
+import useForm  from '../../hooks/useForm';
 
 function StepSphere() {
 
-  const { errorMessage } = useForm({ line_of_business: '' });
+  const{data, handleChange} =useForm();
+  console.log(JSON.stringify(data));
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [inputValue, setInputValue] = useState('');
-  // const [errorMessage, setErrorMessage] = useState(true);
 
   const navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/city');
@@ -26,10 +27,6 @@ function StepSphere() {
     console.log('Вы удалили чипс');
   };
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
   return (
 
     <div className='sphere__container'>
@@ -37,8 +34,8 @@ function StepSphere() {
         className="sphere__input sphere__input_error"
         type="text"
         name="line_of_business"
-        value={inputValue}
-        onChange={handleInputChange}
+        value={data.line_of_business || ''}
+        onChange={handleChange}
         placeholder="Введите название сферы"
       />
       <span className='sphere__error'>{errorMessage}</span>

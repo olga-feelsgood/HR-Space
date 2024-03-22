@@ -3,15 +3,17 @@ import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepEducation() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/candidaterequirements/portfolio');
-  const [errorMessage, setErrorMessage] = useState(true);
 
   return (
     <>
@@ -22,18 +24,24 @@ function StepEducation() {
             radioTitle='Высшее'
             radioValue='higher'
             radioName='education'//от бэка
+            checked={data.education == 'higher' ? true : false} //от бэка
+            onChange={handleChange}
           />
           <RadioButton
-            radioLabel='college'
+            radioLabel='secondary_special'
             radioTitle='Среднее специальное'
-            radioValue='college'
+            radioValue='secondary_special'
             radioName='education'//от бэка
+            checked={data.education == 'secondary_special' ? true : false} //от бэка
+            onChange={handleChange}
           />
           <RadioButton
             radioLabel='courses'
             radioTitle='Курсы'
             radioValue='courses'
             radioName='education'//от бэка
+            checked={data.education == 'courses' ? true : false} //от бэка
+            onChange={handleChange}
           />
         </div>
         {errorMessage && <p className='education__error'>Ничего не выбрано</p>}

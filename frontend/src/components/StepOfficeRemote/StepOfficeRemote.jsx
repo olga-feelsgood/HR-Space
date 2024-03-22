@@ -4,12 +4,16 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepOfficeRemote() {
+
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
+  const [stepIsValid, setStepIsValid] = useState(true);
+
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/salary');
@@ -22,18 +26,24 @@ function StepOfficeRemote() {
             radioLabel='remote'
             radioTitle='Удалённая'
             radioValue='remote'
+            checked={data.work_format == 'remote' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='work_format'//от бэка
           />
           <RadioButton
             radioLabel='mixed'
             radioTitle='Гибрид'
             radioValue='mixed'
+            onChange={handleChange}
+            checked={data.work_format == 'mixed' ? true : false} //от бэка
             radioName='work_format'//от бэка
           />
           <RadioButton
             radioLabel='office'
             radioTitle='Офис'
             radioValue='office'
+            onChange={handleChange}
+            checked={data.work_format == 'office' ? true : false} //от бэка
             radioName='work_format'//от бэка
           />
         </div>

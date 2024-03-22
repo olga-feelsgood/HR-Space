@@ -3,13 +3,14 @@ import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepEmploymentType() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
-
+  const [stepIsValid, setStepIsValid] = useState(true);
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/businesstrips');
 
@@ -21,24 +22,32 @@ function StepEmploymentType() {
             radioLabel='full'
             radioTitle='Полная'
             radioValue='full'
+            checked={data.type_employment == 'full' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='partial'
             radioTitle='Частичная'
             radioValue='partial'
+            checked={data.type_employment == 'partial' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='project'
             radioTitle='Проектная'
             radioValue='project'
+            checked={data.type_employment == 'project' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
           <RadioButton
             radioLabel='internship'
             radioTitle='Стажировка'
             radioValue='internship'
+            checked={data.type_employment == 'internship' ? true : false} //от бэка
+            onChange={handleChange}
             radioName='type_employment'//от бэка
           />
         </div>

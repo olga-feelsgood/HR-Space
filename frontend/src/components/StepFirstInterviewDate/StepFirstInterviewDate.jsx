@@ -5,35 +5,29 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
+import useForm from '../../hooks/useForm';
 
 function StepFirstInterviewDate() {
+  const { data, handleChange } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/recruiterrequirements/recruitersnumber');
 
-  // const handleDateChange = (date) => {
-  //   setSelectedDate(date);
-  // };
-
   return (
-    <>
       <div className='interview-date__container'>
         <div>
-          <DatePicker
-            showIcon
-            toggleCalendarOnIconClick
-            selected={selectedDate}
-            placeholderText="Выберите дату"
-            className="interview-date__picker"
-            onChange={(date) => setSelectedDate(date)}
+          <input
+            className='interview-date__input'
+            type='text'
+            name='start_interview'
+            value={data.start_interview}
+            onChange={handleChange}
+            placeholder='ДД.ММ.ГГГГ'
           />
-          {/* <img
-            className="calendar__icon"
-            src={calendar} alt="Календарь" /> */}
         </div>
         <div className='interview-date__button'>
           <Button
@@ -44,7 +38,6 @@ function StepFirstInterviewDate() {
           />
         </div>
       </div>
-    </>
   )
 }
 
