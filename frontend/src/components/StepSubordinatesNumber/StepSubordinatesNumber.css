@@ -1,9 +1,8 @@
-
 .subordinates-number__container {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 175px;
 }
 
 .subordinates-number__input {

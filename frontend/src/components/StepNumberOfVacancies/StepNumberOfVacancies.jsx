@@ -25,8 +25,7 @@ function StepNumberOfVacancies() {
           <input
             className="number-vacancies__input"
             type="text"
-            name="cityName"
-            list="cities"
+            name="number"
             value={inputValue}
             onChange={handleInputChange}
             placeholder="Введите число сотрудников для поиска"

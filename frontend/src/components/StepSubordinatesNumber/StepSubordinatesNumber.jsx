@@ -1,5 +1,6 @@
 import './StepSubordinatesNumber.css';
 import Button from '../Button/Button.jsx'
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,23 +20,24 @@ function StepSubordinatesNumber() {
 
   return (
     <div className='subordinates-number__container'>
-        <input
-          className="subordinates-number__input"
-          type="text"
-          name="the begin of the workday"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="Сотрудников в подчинении"
+      <input
+        className="subordinates-number__input"
+        type="text"
+        name="the begin of the workday"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Сотрудников в подчинении"
+      />
+      <CurrentApplicationBox />
+      <div className='subordinates-number__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
         />
-        <div className='subordinates-number__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
       </div>
+    </div>
   )
 }
 
