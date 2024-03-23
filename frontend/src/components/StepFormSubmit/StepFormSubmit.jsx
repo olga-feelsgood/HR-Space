@@ -16,6 +16,7 @@ function StepFormSubmit() {
         <p className='form-submit__text'> После одобрения заявки модератором она станет доступна для отклика рекрутерам.</p>
         <div className='form-submit__button'>
           <Button
+          
             stepIsValid={stepIsValid}
             buttonTitle='Опубликовать'
             buttonType='submit'

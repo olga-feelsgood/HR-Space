@@ -1,6 +1,5 @@
 import './App.css'
 import { Routes, Route, useLocation } from 'react-router-dom'
-// import { useState } from 'react'
 import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
 import StepHome from '../StepHome/StepHome.jsx'
@@ -34,7 +33,6 @@ import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecr
 import StepCheckBeforePayment from '../StepCheckBeforePayment/StepCheckBeforePayment.jsx'
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
-import { FormProvider } from '../../context/FormContext.jsx'
 import useForm from '../../hooks/useForm.jsx'
 
 
@@ -42,18 +40,17 @@ function App() {
 
   const { data } = useForm();
 
-  console.log(JSON.stringify(data));
+  // console.log(`из App:${JSON.stringify(data)}`);
 
   let { pathname } = useLocation();
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(JSON.stringify(data));
+    console.log(`на отправку:${JSON.stringify(data)}`);
   }
 
   return (
     <>
-      <FormProvider>
         <aside>
           <Routes >
             <Route path='/*' element={<Header />} />
@@ -110,7 +107,6 @@ function App() {
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </form>
-      </FormProvider>
     </>
   )
 }
