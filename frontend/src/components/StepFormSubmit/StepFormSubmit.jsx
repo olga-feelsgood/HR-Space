@@ -1,9 +1,11 @@
 import './StepFormSubmit.css'
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
-
+import useForm from '../../hooks/useForm';
 
 function StepFormSubmit() {
+  const { data } = useForm();
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
 

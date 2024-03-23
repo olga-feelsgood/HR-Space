@@ -3,9 +3,13 @@ import Button from '../Button/Button.jsx'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import useForm from '../../hooks/useForm';
 
 function StepRecruitersTasks() {
+    const { data, handleChange } = useForm();
+    // const { data, handleCBChange } = useForm();
+
+    console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
@@ -17,35 +21,61 @@ function StepRecruitersTasks() {
     <>
       <div className='recruiters-tasks__container'>
         <div className='recruiters-tasks__checkbox'>
-          <CheckBox
-            checkboxLabel='selection'
+        <CheckBox
+            checkboxLabel='1'
             checkboxTitle='Подбор кандидатов'
-            checkboxValue='selection'
-            checkboxName='hr_responsibility'//от бэка
+            checkboxValue='1'
+            checkboxName='hr_responsibility1'//от бэка
+            checked={data.hr_responsibility1} //от бэка
+            // checked={data.hr_responsibility.includes('1') } //от бэка
+            // checked={data.hr_responsibility == '1' ? true : false} //от бэка
+            // onChange={handleCBChange}
+            onChange={handleChange}
           />
           <CheckBox
-            checkboxLabel='interview-organisation'
+            checkboxLabel='2'
             checkboxTitle='Организация собеседований'
-            checkboxValue='interview-organisation'
-            checkboxName='hr_responsibility'//от бэка
+            checkboxValue='2'
+            checkboxName='hr_responsibility2'//от бэка
+            checked={data.hr_responsibility2} //от бэка
+            // checked={data.hr_responsibility.includes('2') } //от бэка
+            // checked={data.hr_responsibility == '2' ? true : false} //от бэка
+            // checked={data.hr_responsibility == '2' ? true : false} //от бэка
+            // onChange={handleCBChange}
+            onChange={handleChange}
           />
           <CheckBox
-            checkboxLabel='interview'
+            checkboxLabel='3'
             checkboxTitle='Проведение собеседований'
-            checkboxValue='interview'
-            checkboxName='hr_responsibility'//от бэка
+            checkboxValue='3'
+            checkboxName='hr_responsibility3'//от бэка
+            checked={data.hr_responsibility3} //от бэка
+            // checked={data.hr_responsibility.includes('3') } //от бэка
+            // checked={data.hr_responsibility == '3' ? true : false} //от бэка
+            // onChange={handleCBChange}
+            onChange={handleChange}
           />
           <CheckBox
-            checkboxLabel='recomendation'
+            checkboxLabel='4'
             checkboxTitle='Запрос рекомендаций'
-            checkboxValue='recomendation'
-            checkboxName='hr_responsibility'//от бэка
+            checkboxValue='4'
+            checkboxName='hr_responsibility4'//от бэка
+            checked={data.hr_responsibility4} //от бэка
+            // checked={data.hr_responsibility.includes('4') } //от бэка
+            // checked={data.hr_responsibility == '4' ? true : false} //от бэка
+            // onChange={handleCBChange}
+            onChange={handleChange}
           />
           <CheckBox
-            checkboxLabel='tests'
+            checkboxLabel='5'
             checkboxTitle='Отправка тестового задания'
-            checkboxValue='tests'
-            checkboxName='hr_responsibility'//от бэка
+            checkboxValue='5'
+            checkboxName='hr_responsibility5'//от бэка
+            checked={data.hr_responsibility5} //от бэка
+            // checked={data.hr_responsibility.includes('5') } //от бэка
+            // checked={data.hr_responsibility == '5' ? true : false} //от бэка
+            // onChange={handleCBChange}
+            onChange={handleChange}
           />
         </div>
         {errorMessage && <p className='recruiters-tasks__error'>Ничего не выбрано</p>}

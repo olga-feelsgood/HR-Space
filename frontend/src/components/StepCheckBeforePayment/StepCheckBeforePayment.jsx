@@ -4,9 +4,12 @@ import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepCheckBeforePayment() {
+  const { data, handleChange } = useForm();
+
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
 
@@ -23,7 +26,9 @@ function StepCheckBeforePayment() {
             checkboxLabel='agree'
             checkboxTitle='Я принимаю условия «Оферты на заключение договора об использовании веб-сервиса HRspace»'
             checkboxValue='agree'
-            checkboxName='agreement'
+            checkboxName='oferta'//от бэка
+            checked={data.oferta} //от бэка
+            onChange={handleChange}
           />
         </div>
         <div className='payment-check__buttons'>

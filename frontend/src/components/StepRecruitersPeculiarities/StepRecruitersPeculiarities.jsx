@@ -3,30 +3,61 @@ import Button from '../Button/Button.jsx'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import useForm from '../../hooks/useForm';
 
 function StepRecruitersPeculiarities() {
+  const { data, handleChange } = useForm();
+
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+
+  const [text, setText] = useState('');
+  const maxLength = 100;
+
+  const progress = (text.length / maxLength) * 1000;
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/formpayment');
 
   return (
-    <>
-      <div className='recruiters-peculiarities__container'>
-      <div className='recruiters-peculiarities__checkbox'>
+    <div className='recruiters-peculiarities__container'>
+
+      <div className='recruiters-peculiarities__input-container'>
+        <input
+          className="recruiters-peculiarities__input"
+          type="text"
+          name="hr_requirements"
+          value={data.hr_requirements}
+          onChange={handleChange}
+          maxLength={maxLength}
+          placeholder='НУкажите специальные знания и навыки, которыми должен обладать рекрутер. Будут ли дополнительные задачи.
+
+          Это поможет рекрутерам оценить свою возможность закрытия заявки.
+          
+          Не дублируйте ранее описанные пункты. '
+        />
+        <div style={{ width: `${progress}%` }}></div>
+        <div className="recruiters-peculiarities__character-count">{text.length}/{maxLength}</div>
+
+
+
+        <div className='recruiters-peculiarities__checkbox'>
           <CheckBox
             checkboxLabel='entity'
             checkboxTitle='Только для юридических лиц и ИП'
             checkboxValue='entity'
-            checkboxName='hr_requirements'//от бэка
+            checkboxName='hr_requirements1'//от бэка
+            checked={data.hr_requirements1} //от бэка
+            onChange={handleChange}
           />
           <CheckBox
             checkboxLabel='freelancing'
             checkboxTitle='Только для самозанятых и фрилансеров'
             checkboxValue='freelancing'
-            checkboxName='hr_requirements'//от бэка
+            checkboxName='hr_requirements2'//от бэка
+            checked={data.hr_requirements2} //от бэка
+            onChange={handleChange}
           />
         </div>
         <div className='recruiters-peculiarities__button'>
@@ -38,7 +69,7 @@ function StepRecruitersPeculiarities() {
           />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
