@@ -141,11 +141,9 @@ function StepSkills() {
             className={`skills__chip ${selectedSkills.includes(skill) ? 'skills__chip--selected' : ''}`}
             label={skill}
             variant="outlined"
-            disableRipple
-            disableElevetion
-            // sx={{ bgcolor: blue['blue-10'], textTransform: 'none', borderRadius: '4px' }}
+            sx={{ textTransform: 'none', borderRadius: '4px' }}
             onClick={() => handleChipClick(skill)}
-            onDelete={() => handleDelete(skill)}
+
           />
         ))}
       </Stack>
