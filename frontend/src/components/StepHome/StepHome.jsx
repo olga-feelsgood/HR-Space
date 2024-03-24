@@ -10,7 +10,7 @@ function StepHome() {
   // console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/warning');
@@ -20,7 +20,7 @@ function StepHome() {
       <div className='home__input-container'>
         <h1 className='home__title'>Название вакансии</h1>
         <input
-          className='home__input home__input_error'
+          className={`home__input ${errorMessage && 'home__input_error'}`}
           type='text'
           value={data.name || ''}
           onChange={handleChange}

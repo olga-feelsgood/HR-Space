@@ -31,7 +31,7 @@ function StepSphere() {
     <>
       <div className='sphere__container'>
         <input
-          className="sphere__input sphere__input_error"
+          className={`sphere__input ${errorMessage && 'sphere__input_error'}`}
           type="text"
           name="line_of_business"
           value={data.line_of_business || ''}
@@ -39,7 +39,7 @@ function StepSphere() {
           placeholder="Введите название сферы"
         />
         <span className='sphere__error'>{errorMessage}</span>
-        {/* {errorMessage && <span className='sphere__error'>Ничего не выбрано</span>} */}
+        {errorMessage && <span className='sphere__error'>Ничего не выбрано</span>}
         <Stack
           className="sphere__chips-container"
           direction="row" spacing={1}>
