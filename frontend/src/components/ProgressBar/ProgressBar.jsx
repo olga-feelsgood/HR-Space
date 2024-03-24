@@ -1,9 +1,6 @@
 import './ProgressBar.css'
 import { useLocation, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-// import { useState } from 'react';
-import progressLineActive from '../../images/progress-line-active.svg'
-import progressLineDisabled from '../../images/progress-line-disabled.svg'
 
 function ProgressBar() {
 
@@ -52,13 +49,13 @@ function ProgressBar() {
 
             ? < li className='progress-bar__link progress-bar__link_active'>
               <NavLink to='/jobdescription/sphere' className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
+              <span className='progress-bar__line progress-bar__line_active'></span>
                 Опишите вакансию</NavLink>
             </li>
 
             : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
+              <span className='progress-bar__line'></span>
               </div>
               Опишите вакансию
             </li>}
@@ -84,13 +81,13 @@ function ProgressBar() {
 
             ? < li className='progress-bar__link progress-bar__link_active'>
               <NavLink to='/candidaterequirements/yearsofexperience' className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
+              <span className='progress-bar__line progress-bar__line_active'></span>
                 Требования к кандидату</NavLink>
             </li>
 
             : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
+              <span className='progress-bar__line'></span>
               </div>
               Требования к кандидату
             </li>}
@@ -111,13 +108,13 @@ function ProgressBar() {
 
             ? < li className='progress-bar__link progress-bar__link_active'>
               <NavLink to='/workingconditions/numberofvacancies' className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
+              <span className='progress-bar__line progress-bar__line_active'></span>
                 Условия работы</NavLink>
             </li>
 
             : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
+              <span className='progress-bar__line'></span>
               </div>
               Условия работы
             </li>}
@@ -132,13 +129,13 @@ function ProgressBar() {
 
             ? < li className='progress-bar__link progress-bar__link_active'>
               <NavLink to='/recruiterrequirements/recruitersnumber' className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineActive} alt='Прогресс лайн активный' />
+              <span className='progress-bar__line progress-bar__line_active'></span>
                 Требования к рекрутеру</NavLink>
             </li>
 
             : < li className='progress-bar__link'>
               <div className='progress-bar__step'>
-                <img className='progress-bar__line' src={progressLineDisabled} alt='Прогресс лайн неактивный' />
+                <span className='progress-bar__line'></span>
               </div>
               Требования к рекрутеру
             </li>}

@@ -35,7 +35,6 @@
 
 .progress-bar__link {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   font-family: Arial;
   font-size: 20px;
@@ -59,5 +58,14 @@
 }
 
 .progress-bar__line {
+  display: block;
+  width: 276px;
+  min-height: 8px;
+  border-radius: 2px;
+  background-color: #BABDBF;
   margin-bottom: 12px;
+}
+
+.progress-bar__line_active {
+  background-color: #71A2FF;
 }
