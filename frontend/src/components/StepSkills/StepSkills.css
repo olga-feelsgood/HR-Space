@@ -14,7 +14,7 @@
   align-items: center;
   gap: 32px;
   border-radius: 8px;
-  border: 1px solid var(--Gray-30, #d4d7d9);
+  border: 1px solid var(--Blue-50, #71a2ff);
   background: var(--White-10, #fff);
   margin: 18px;
 }
@@ -28,8 +28,26 @@
 }
 
 .skills__chip {
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   border-radius: 4px;
   border: 1px solid var(--Blue-Violet-blue-40, #cfd8fa);
+}
+
+.skills__chip-selected {
+  display: flex;
+  height: 101px;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  margin-bottom: 21px;
+  border-radius: 4px;
+  border: var(--Blue-Violet-blue-10, #e1e8fd);
 }
 
 .skills__button {
