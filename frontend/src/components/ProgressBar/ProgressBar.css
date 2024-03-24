@@ -17,9 +17,8 @@
 }
 
 .progress-bar__menu {
-  margin: auto;
+  margin: 0;
   display: flex;
-  /* justify-content: flex-start; */
   flex-direction: row;
   font-family: 'Proxima Nova';
 }
@@ -63,7 +62,7 @@
   min-height: 8px;
   border-radius: 2px;
   background-color: #BABDBF;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .progress-bar__line_active {
