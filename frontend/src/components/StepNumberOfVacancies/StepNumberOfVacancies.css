@@ -20,5 +20,7 @@
 }
 
 .number-vacancies__button {
-  margin: 100px 0 0 500px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

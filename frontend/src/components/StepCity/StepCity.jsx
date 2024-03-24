@@ -24,6 +24,7 @@ function StepCity() {
 
 
   return (
+    <>
     <div className='city__container'>
       <input
         className='city__input city__input_error'
@@ -45,7 +46,16 @@ function StepCity() {
       <span className='city__error'>{errorMessage}</span>
       {/* {errorMessage && <span className='city__error'>Ничего не выбрано</span>} */}
       <div className='city__current'><CurrentApplicationBox /></div>
-      <div className='city__button'>
+      {/* <div className='city__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div> */}
+    </div>
+    <div className='city__button'>
         <Button
           onClick={onRedirect}
           stepIsValid={stepIsValid}
@@ -53,7 +63,7 @@ function StepCity() {
           buttonType='button'
         />
       </div>
-    </div>
+    </>
   )
 }
 

@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm';
 
 function StepRecruitersTasks() {
-    const { data, handleChange } = useForm();
-    // const { data, handleCBChange } = useForm();
+  const { data, handleChange } = useForm();
+  // const { data, handleCBChange } = useForm();
 
-    console.log(JSON.stringify(data));
+  console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState(true);
@@ -21,7 +21,7 @@ function StepRecruitersTasks() {
     <>
       <div className='recruiters-tasks__container'>
         <div className='recruiters-tasks__checkbox'>
-        <CheckBox
+          <CheckBox
             checkboxLabel='1'
             checkboxTitle='Подбор кандидатов'
             checkboxValue='1'
@@ -79,14 +79,22 @@ function StepRecruitersTasks() {
           />
         </div>
         {errorMessage && <p className='recruiters-tasks__error'>Ничего не выбрано</p>}
-        <div className='recruiters-tasks__button'>
+        {/* <div className='recruiters-tasks__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='recruiters-tasks__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

@@ -35,5 +35,7 @@
   cursor: pointer;
 }
 .interview-date__button {
-  margin-top: 20px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

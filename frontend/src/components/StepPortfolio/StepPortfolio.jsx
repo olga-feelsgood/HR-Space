@@ -18,7 +18,7 @@ function StepPortfolio() {
   return (
     <>
       <div className='portfolio__container'>
-      <div className='portfolio__radiobuttons'>
+        <div className='portfolio__radiobuttons'>
           <RadioButton
             radioLabel='is_required'
             radioTitle='Необходимо предоставить'
@@ -37,14 +37,22 @@ function StepPortfolio() {
           />
         </div>
         {errorMessage && <p className='portfolio__error'>Ничего не выбрано</p>}
-        <div className='portfolio__button'>
+        {/* <div className='portfolio__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='portfolio__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

@@ -28,111 +28,121 @@ function StepSkills() {
 
 
   return (
-    <div className='skills__container'>
+    <>
+      <div className='skills__container'>
 
-      <input
-        className="skills__input"
-        type="text"
-        name="skill"
-        value={data.skill}
-        onChange={handleChange}
-        placeholder="Введите навык"
-      />
-
-      <Stack
-        className="skills__chips-container"
-        direction="row" spacing={1}>
-
-        <Chip
-          className="skills__chip"
-          label="Авансовый отчёт"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Авансовый отчёт")}
+        <input
+          className="skills__input"
+          type="text"
+          name="skill"
+          value={data.skill}
+          onChange={handleChange}
+          placeholder="Введите навык"
         />
 
-        <Chip
-          className="skills__chip"
-          label="Акты сверок"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Акты сверок")}
+        <Stack
+          className="skills__chips-container"
+          direction="row" spacing={1}>
+
+          <Chip
+            className="skills__chip"
+            label="Авансовый отчёт"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Авансовый отчёт")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Акты сверок"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Акты сверок")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Архивация"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Архивация")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Бухгалтерская отчетность"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Бухгалтерская отчетность")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Бухгалтерский учет"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Бухгалтерский учет")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Дебиторская должность"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Дебиторская должность")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Налоговая отчетность"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Налоговая отчетность")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Тяжелое машиностроение"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Тяжелое машиностроение")} />
+
+          <Chip
+            className="skills__chip"
+            label="1С: Бухгалтерия"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("1С: Бухгалтерия")}
+          />
+
+          <Chip
+            className="skills__chip"
+            label="Отчётность в ФСС"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Отчётность в ФСС")}
+          />
+
+
+          <Chip
+            className="skills__chip"
+            label="Первичная документация"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Первичная документация")}
+          />
+
+        </Stack>
+        <div className="skills__current">  <CurrentApplicationBox /></div>
+        {/* <div className='skills__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
         />
-
-        <Chip
-          className="skills__chip"
-          label="Архивация"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Архивация")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Бухгалтерская отчетность"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Бухгалтерская отчетность")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Бухгалтерский учет"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Бухгалтерский учет")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Дебиторская должность"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Дебиторская должность")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Налоговая отчетность"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Налоговая отчетность")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Тяжелое машиностроение"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Тяжелое машиностроение")} />
-
-        <Chip
-          className="skills__chip"
-          label="1С: Бухгалтерия"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("1С: Бухгалтерия")}
-        />
-
-        <Chip
-          className="skills__chip"
-          label="Отчётность в ФСС"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Отчётность в ФСС")}
-        />
-
-
-        <Chip
-          className="skills__chip"
-          label="Первичная документация"
-          variant="outlined"
-          onDelete={handleDelete}
-          onClick={() => handleChipClick("Первичная документация")}
-        />
-
-      </Stack>
-      <div className="skills__current">  <CurrentApplicationBox /></div>
+      </div> */}
+      </div>
       <div className='skills__button'>
         <Button
           onClick={onRedirect}
@@ -141,7 +151,7 @@ function StepSkills() {
           buttonType='button'
         />
       </div>
-    </div>
+    </>
   )
 }
 

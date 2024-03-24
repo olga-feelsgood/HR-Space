@@ -18,7 +18,7 @@ function StepBusinessTrips() {
   return (
     <>
       <div className='business-trips__container'>
-      <div className='business-trips__radiobuttons'>
+        <div className='business-trips__radiobuttons'>
           <RadioButton
             radioLabel='yes'
             radioTitle='Да'
@@ -45,14 +45,22 @@ function StepBusinessTrips() {
           />
         </div>
         {errorMessage && <p className='business-trips__error'>Ничего не выбрано</p>}
-        <div className='business-trips__button'>
+        {/* <div className='business-trips__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='business-trips__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

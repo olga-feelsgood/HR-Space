@@ -17,11 +17,12 @@ body {
 
 .form {
   max-width: 952px;
+  min-height: 696px;
   width: 952px;
   display: flex;
   position: absolute;
   right: 0;
-  margin-right: 74px;
+  margin-right: 44px;
 }
 
 .form_fullpage {

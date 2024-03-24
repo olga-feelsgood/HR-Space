@@ -34,14 +34,22 @@ function StepNumberOfVacancies() {
           />
           <CurrentApplicationBox />
         </div>
-        <div className='number-vacancies__button'>
+        {/* <div className='number-vacancies__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='number-vacancies__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

@@ -18,7 +18,7 @@ function StepEducation() {
   return (
     <>
       <div className='education__container'>
-      <div className='education__radiobuttons'>
+        <div className='education__radiobuttons'>
           <RadioButton
             radioLabel='higher'
             radioTitle='Высшее'
@@ -45,14 +45,22 @@ function StepEducation() {
           />
         </div>
         {errorMessage && <p className='education__error'>Ничего не выбрано</p>}
-        <div className='education__button'>
+        {/* <div className='education__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='education__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

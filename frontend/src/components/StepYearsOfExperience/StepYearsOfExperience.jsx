@@ -61,14 +61,22 @@ function StepYearsOfExperience() {
           />
         </div>
         {errorMessage && <p className='years-experience__error'>Ничего не выбрано</p>}
-        <div className='years-experience__button'>
+        {/* <div className='years-experience__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='years-experience__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

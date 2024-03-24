@@ -16,6 +16,7 @@ function StepCandidateFirstWorkingDay() {
   const onRedirect = () => navigate('/workingconditions/interview');
 
   return (
+    <>
       <div className='candidate-firstday__container'>
         <div>
           <input
@@ -29,15 +30,24 @@ function StepCandidateFirstWorkingDay() {
           <span>По статистике площадки средний срок закрытия вакансии — 1 месяц.</span>
         </div>
         <CurrentApplicationBox />
-        <div className='candidate-firstday__button'>
+        {/* <div className='candidate-firstday__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
       </div>
+      <div className='candidate-firstday__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
+    </>
   )
 }
 

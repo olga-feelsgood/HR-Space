@@ -21,20 +21,30 @@ function StepJobPeculiarities() {
   const progress = (text.length / maxLength) * 1000;
 
   return (
-    <div className='job-peculiarities__container'>
-      <div className='job-peculiarities__input-container'>
-        <input
-          className="job-peculiarities__input"
-          type="text"
-          name="features_vacancy"
-          value={data.features_vacancy}
-          onChange={handleChange}
-          maxLength={maxLength}
-          placeholder="Например, Вы ищете сотрудника для 
+    <>
+      <div className='job-peculiarities__container'>
+        <div className='job-peculiarities__input-container'>
+          <input
+            className="job-peculiarities__input"
+            type="text"
+            name="features_vacancy"
+            value={data.features_vacancy}
+            onChange={handleChange}
+            maxLength={maxLength}
+            placeholder="Например, Вы ищете сотрудника для 
           запуска нового проекта.                                                                                                                          Не дублируйте ранее описанные пункты."
+          />
+          <div style={{ width: `${progress}%` }}></div>
+          <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
+        </div>
+        {/* <div className='job-peculiarities__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
         />
-        <div style={{ width: `${progress}%` }}></div>
-        <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
+      </div> */}
       </div>
       <div className='job-peculiarities__button'>
         <Button
@@ -44,7 +54,7 @@ function StepJobPeculiarities() {
           buttonType='button'
         />
       </div>
-    </div>
+    </>
   )
 }
 

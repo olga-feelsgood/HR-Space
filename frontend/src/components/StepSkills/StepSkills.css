@@ -33,5 +33,7 @@
 }
 
 .skills__button {
-  margin: 50px 0 0 550px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

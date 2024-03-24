@@ -42,5 +42,7 @@
 }
 
 .working-hours__button {
-  margin: 200px 0 0 300px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

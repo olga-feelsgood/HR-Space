@@ -21,7 +21,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  padding: 20px 10px;
+  padding: 20px 13px;
   margin: 4px 0;
 }
 
@@ -40,7 +40,7 @@
 }
 
 /* не работает цвет стрелки*/
-.side-bar__link:visited:after {
+.side-bar__link:visited+.side-bar__link:after {
   content: '';
   background-image: url(../../images/sidebararrow_black.svg);
 }

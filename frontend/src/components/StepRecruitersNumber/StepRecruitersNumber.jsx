@@ -46,14 +46,22 @@ function StepRecruitersNumber() {
           />
         </div>
         {errorMessage && <p className='recruiters-number__error'>Ничего не выбрано</p>}
-        <div className='recruiters-number__button'>
+        {/* <div className='recruiters-number__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='recruiters-number__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

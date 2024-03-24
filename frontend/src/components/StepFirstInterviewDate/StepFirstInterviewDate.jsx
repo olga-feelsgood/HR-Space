@@ -18,6 +18,7 @@ function StepFirstInterviewDate() {
   const onRedirect = () => navigate('/recruiterrequirements/recruitersnumber');
 
   return (
+    <>
       <div className='interview-date__container'>
         <div>
           <input
@@ -38,6 +39,7 @@ function StepFirstInterviewDate() {
           />
         </div>
       </div>
+    </>
   )
 }
 

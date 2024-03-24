@@ -19,7 +19,7 @@ function StepInterview() {
     <>
       <div className='interview__container'>
         <p className='interview__text'>Укажите, с какими кандидатами Вы бы хотели проводить собеседования самостоятельно:</p>
-      <div className='interview__radiobuttons'>
+        <div className='interview__radiobuttons'>
           <RadioButton
             radioLabel='1'
             radioTitle='Со всеми кандидатами, чьё резюме будет релевантным'
@@ -38,14 +38,22 @@ function StepInterview() {
           />
         </div>
         {errorMessage && <p className='interview__error'>Ничего не выбрано</p>}
-        <div className='interview__button'>
+        {/* <div className='interview__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='interview__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

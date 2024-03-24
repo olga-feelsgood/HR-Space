@@ -52,14 +52,22 @@ function StepEmploymentType() {
           />
         </div>
         {errorMessage && <p className='employment-type__error'>Ничего не выбрано</p>}
-        <div className='employment-type__button'>
+        {/* <div className='employment-type__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='employment-type__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )

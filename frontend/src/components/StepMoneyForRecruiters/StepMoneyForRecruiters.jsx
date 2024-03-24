@@ -32,14 +32,22 @@ function StepMoneyForRecruiters() {
 
         <span>Рекомендуемый размер вознаграждения — 1,5-2 среднемесячные зарплаты кандидата и выше</span>
         <CurrentApplicationBox />
-        <div className='money-recruiters__button'>
+        {/* <div className='money-recruiters__button'>
           <Button
             onClick={onRedirect}
             stepIsValid={stepIsValid}
             buttonTitle='Далее'
             buttonType='button'
           />
-        </div>
+        </div> */}
+      </div>
+      <div className='money-recruiters__button'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
       </div>
     </>
   )
