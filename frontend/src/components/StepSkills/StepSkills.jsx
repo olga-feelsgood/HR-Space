@@ -1,5 +1,6 @@
 import './StepSkills.css'
 import Button from '../Button/Button.jsx'
+import vector from '../../images/vector.svg'
 import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
@@ -9,22 +10,22 @@ import useForm from '../../hooks/useForm';
 
 function StepSkills() {
   const { data, handleChange } = useForm();
-  console.log(JSON.stringify(data));
+  const skills = ['Авансовый отчёт', 'Акты сверок', 'Архивация', 'Бухгалтерская отчетность', 'Бухгалтерский учет', 'Дебиторская должность', 'Налоговая отчетность', 'Тяжелое машиностроение', '1С: Бухгалтерия', 'Отчётность в ФСС', 'Первичная документация'];
+  const [selectedSkills, setSelectedSkills] = useState([]);
+
+  const handleChipClick = (skill) => {
+    if (!selectedSkills.includes(skill)) {
+      setSelectedSkills(prevSelectedSkills => [...prevSelectedSkills, skill]);
+    }
+    handleChange({ target: { name: "skill", value: [...selectedSkills, skill] } });
+  }
+
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [errorMessage, setErrorMessage] = useState(true);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/candidaterequirements/education');
-
-  //пропишу логику позже
-  const handleChipClick = (chip) => {
-    console.log('Вы добавили чипс');
-  }
-  //оставлю пока эту функцию на будущее
-  const handleDelete = () => {
-    console.log('Вы удалили чипс');
-  };
 
 
   return (
@@ -35,11 +36,11 @@ function StepSkills() {
         type="text"
         name="skill"
         value={data.skill}
-        onChange={handleChange}
+        onChange={() => { }}
         placeholder="Введите навык"
       />
 
-      <Stack
+      {/* <Stack
         className="skills__chips-container"
         direction="row" spacing={1}>
 
@@ -47,7 +48,7 @@ function StepSkills() {
           className="skills__chip"
           label="Авансовый отчёт"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Авансовый отчёт")}
         />
 
@@ -55,7 +56,7 @@ function StepSkills() {
           className="skills__chip"
           label="Акты сверок"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Акты сверок")}
         />
 
@@ -63,7 +64,7 @@ function StepSkills() {
           className="skills__chip"
           label="Архивация"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Архивация")}
         />
 
@@ -71,7 +72,7 @@ function StepSkills() {
           className="skills__chip"
           label="Бухгалтерская отчетность"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Бухгалтерская отчетность")}
         />
 
@@ -79,7 +80,7 @@ function StepSkills() {
           className="skills__chip"
           label="Бухгалтерский учет"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Бухгалтерский учет")}
         />
 
@@ -87,7 +88,7 @@ function StepSkills() {
           className="skills__chip"
           label="Дебиторская должность"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Дебиторская должность")}
         />
 
@@ -95,7 +96,7 @@ function StepSkills() {
           className="skills__chip"
           label="Налоговая отчетность"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Налоговая отчетность")}
         />
 
@@ -103,14 +104,14 @@ function StepSkills() {
           className="skills__chip"
           label="Тяжелое машиностроение"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Тяжелое машиностроение")} />
 
         <Chip
           className="skills__chip"
           label="1С: Бухгалтерия"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("1С: Бухгалтерия")}
         />
 
@@ -118,7 +119,7 @@ function StepSkills() {
           className="skills__chip"
           label="Отчётность в ФСС"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Отчётность в ФСС")}
         />
 
@@ -127,11 +128,33 @@ function StepSkills() {
           className="skills__chip"
           label="Первичная документация"
           variant="outlined"
-          onDelete={handleDelete}
+
           onClick={() => handleChipClick("Первичная документация")}
         />
 
+      </Stack> */}
+
+      <Stack className="skills__chips-container" direction="row" spacing={1}>
+        {skills.map(skill => (
+          <Chip
+            key={skill}
+            className={`skills__chip ${selectedSkills.includes(skill) ? 'skills__chip--selected' : ''}`}
+            label={skill}
+            variant="outlined"
+            disableRipple
+            disableElevetion
+            // sx={{ bgcolor: blue['blue-10'], textTransform: 'none', borderRadius: '4px' }}
+            onClick={() => handleChipClick(skill)}
+            onDelete={() => handleDelete(skill)}
+          />
+        ))}
       </Stack>
+      <div className="skills__chip-selected">
+        {selectedSkills.map(skill => (
+          <Chip key={skill} className="skills__chip-selected-item" label={skill} />
+        ))}
+      </div>
+
       <div className="skills__current">  <CurrentApplicationBox /></div>
       <div className='skills__button'>
         <Button
