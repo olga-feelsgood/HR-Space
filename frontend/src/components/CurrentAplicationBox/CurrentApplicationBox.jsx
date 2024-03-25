@@ -3,43 +3,33 @@ import check from '../../images/check.svg'
 import { useContext } from "react"
 import FormContext from '../../context/FormContext';
 
+
 function CurrentApplicationBox() {
     const { data } = useContext(FormContext);
-    const maxVisibleItems = 4;
 
-    const dataKeys = Object.keys(data);
-    const visibleData = dataKeys.slice(0, maxVisibleItems);
+    const selectedItems = [];
+    for (const key in data) {
+        if (Object.hasOwnProperty.call(data, key)) {
+            // проверка, что значение свойства не пустое 
+            if (data[key]) {
+                selectedItems.push(data[key]);
+            }
+        }
+    }
 
     return (
-        <>
-            <div className="current__container">
-                <h2 className="current__title">Текущая заявка: {data.name}</h2>
-                <img src={check} className="current__check" />
-                <div className="current__options">
-                    {visibleData.map(key => (
-                        <p key={key}>{data[key]}</p>
-                    ))}
-                    {data.skill && data.skill.length > 0 && (
-                        <div className="current__skills">
-                            {data.skill.map((skill, index) => (
-                                <span key={index} className="current__chip">
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
-                    )}
-                    {/* {visibleData.map(key => (
-                        <p key={key}>{data[key]}</p>
-                    ))}
-                    {dataKeys.length > maxVisibleItems && (
-                        <p>...</p>
-                    )} */}
-
-                </div>
-
+        <div className="current__container">
+            <h2 className="current__title">Текущая заявка: {data.name}</h2>
+            <img src={check} className="current__check" alt="check" />
+            <div className="current__options">
+                {selectedItems.map((item, index) => (
+                    <span key={index} className="current__item">
+                        {item}{' '}
+                    </span>
+                ))}
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
 export default CurrentApplicationBox;
