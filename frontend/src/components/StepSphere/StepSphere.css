@@ -55,10 +55,9 @@
   padding-left: 200px;
 }
 
-/* .sphere__current {
-  margin-left: 185px;
-  margin-top: 50px;
-} */
+.sphere__current {
+  margin-bottom: 100px;
+}
 
 .sphere__button {
   position: absolute;
