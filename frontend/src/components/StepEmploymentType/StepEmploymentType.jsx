@@ -9,7 +9,7 @@ function StepEmploymentType() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
   let navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/businesstrips');
@@ -51,15 +51,8 @@ function StepEmploymentType() {
             radioName='type_employment'//от бэка
           />
         </div>
-        {errorMessage && <p className='employment-type__error'>Ничего не выбрано</p>}
-        {/* <div className='employment-type__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <span className='employment-type__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='employment-type__error'>Ничего не выбрано</span>} */}
       </div>
       <div className='employment-type__button'>
         <Button
