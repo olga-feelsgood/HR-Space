@@ -24,8 +24,8 @@ function StepSphere() {
   };
 
   const handleChipClick = (chip) => {
-    setSelectedLine_of_business([chip]); // Выбираем только один элемент сферы
-    handleChange({ target: { name: 'line_of_business', value: chip } }); // Обновляем значение в форме
+    setSelectedLine_of_business([chip]);
+    handleChange({ target: { name: 'line_of_business', value: chip } });
   };
 
 
