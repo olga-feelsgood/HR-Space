@@ -59,6 +59,10 @@
   border: 1px solid var(--Blue-Violet-blue-40, #cfd8fa);
 }
 
+.skills__current {
+  margin-bottom: 100px;
+}
+
 .skills__chip-selected {
   display: flex;
   height: 101px;

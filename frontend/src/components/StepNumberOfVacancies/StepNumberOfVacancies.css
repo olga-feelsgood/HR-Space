@@ -45,6 +45,10 @@
   margin-top: 255px; */
 }
 
+.number-vacancies__current {
+  margin-bottom: 100px;
+}
+
 .number-vacancies__button {
   position: absolute;
   right: 0px;

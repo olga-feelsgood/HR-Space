@@ -7,7 +7,7 @@
 
 .payment-check__title {
   color: #303233;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -16,7 +16,9 @@
   margin: 0;
 }
 
-.payment-check__current {}
+.payment-check__current {
+  margin-bottom: 100px;
+}
 
 .payment-check__checkbox {
   margin-top: 36px;

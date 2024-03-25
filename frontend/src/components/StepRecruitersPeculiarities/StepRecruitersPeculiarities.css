@@ -21,6 +21,10 @@
   margin-bottom: 2px;
 }
 
+.recruiters-peculiarities__current {
+  margin-bottom: 100px;
+}
+
 ::placeholder {
   justify-content: flex-start;
   align-items: flex-start;

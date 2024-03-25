@@ -21,11 +21,11 @@
 }
 
 .sphere__input:focus {
-  outline: 1px solid #71A2FF;
+  outline: 1px solid #71a2ff;
 }
 
 .sphere__input_error {
-  border: 1px solid #EC3C3C;
+  border: 1px solid #ec3c3c;
 }
 
 .sphere__chips-container {
@@ -46,7 +46,7 @@
 .sphere__error {
   display: block;
   min-height: 17px;
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 12px;
   font-style: normal;
@@ -56,7 +56,7 @@
 }
 
 .sphere__current {
-  /* margin-top: 200px; */
+  margin-bottom: 100px;
 }
 
 .sphere__button {
