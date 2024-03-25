@@ -1,7 +1,8 @@
 .education__container {
   display: flex;
   flex-direction: column;
-  margin: 65px 0 0 176px;
+  margin-top: 51px;
+  margin-left: 178px;
 }
 
 .education__radiobuttons {

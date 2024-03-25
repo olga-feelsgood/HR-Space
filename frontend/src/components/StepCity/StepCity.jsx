@@ -12,7 +12,7 @@ function StepCity() {
   const{data, handleChange} =useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   //примерно список для проверки
@@ -27,7 +27,7 @@ function StepCity() {
     <>
     <div className='city__container'>
       <input
-        className='city__input city__input_error'
+        className={`city__input ${errorMessage && 'city__input_error'}`}
         type='text'
         name='city'
         list='cities'
@@ -44,16 +44,8 @@ function StepCity() {
         ))}
       </datalist>
       <span className='city__error'>{errorMessage}</span>
-      {/* {errorMessage && <span className='city__error'>Ничего не выбрано</span>} */}
+      {/* {errorMessage && <span className='city__error'>Город, куда требуется сотрубник, не указан</span>} */}
       <div className='city__current'><CurrentApplicationBox /></div>
-      {/* <div className='city__button'>
-        <Button
-          onClick={onRedirect}
-          stepIsValid={stepIsValid}
-          buttonTitle='Далее'
-          buttonType='button'
-        />
-      </div> */}
     </div>
     <div className='city__button'>
         <Button

@@ -9,11 +9,13 @@ import useForm from '../../hooks/useForm';
 
 function StepSphere() {
   const { data, handleChange } = useForm();
-  const [errorMessage, setErrorMessage] = useState('');
-  const [stepIsValid, setStepIsValid] = useState(false);
   const [selectedLine_of_business, setSelectedLine_of_business] = useState([]);
 
   const line_of_business = ['Автомобильный бизнес', 'Добывающая отрасль', 'Лесная промышленность', 'Металлургия', 'Продукты питания', 'Сельское хозяйство', 'Строительство', 'Тяжелое машиностроение', 'Химическое производство', 'Энергетика'];
+  console.log(JSON.stringify(data));
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [stepIsValid, setStepIsValid] = useState(true);
 
   const navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/city');
@@ -45,7 +47,90 @@ function StepSphere() {
           placeholder="Введите название сферы"
         />
         <span className='sphere__error'>{errorMessage}</span>
-        {errorMessage && <span className='sphere__error'>Ничего не выбрано</span>}
+
+        {/* {errorMessage && <span className='sphere__error'>Напишите или выберите сферу, чтобы продолжить</span>} */}
+        <Stack
+          className="sphere__chips-container"
+          direction="row" spacing={1}>
+
+          <Chip
+            className="sphere__chip"
+            label="Автомобильный бизнес"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Автомобильный бизнес")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Добывающая отрасль"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Добывающая отрасль")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Лесная промышленность"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Лесная промышленность")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Металлургия"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Металлургия")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Продукты питания"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Продукты питания")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Сельское хозяйство"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Сельское хозяйство")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Строительство"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Строительство")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Тяжелое машиностроение"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Тяжелое машиностроение")} />
+
+          <Chip
+            className="sphere__chip"
+            label="Химическое производство"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Химическое производство")}
+          />
+
+          <Chip
+            className="sphere__chip"
+            label="Энергетика"
+            variant="outlined"
+            onDelete={handleDelete}
+            onClick={() => handleChipClick("Энергетика")}
+          />
 
         <Stack className='sphere__chips-container' direction='row' spacing={1}>
           {line_of_business.map((item) => (

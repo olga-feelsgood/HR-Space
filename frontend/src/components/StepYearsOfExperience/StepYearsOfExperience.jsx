@@ -4,12 +4,13 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepYearsOfExperience() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -60,15 +61,9 @@ function StepYearsOfExperience() {
             onChange={handleChange}
           />
         </div>
-        {errorMessage && <p className='years-experience__error'>Ничего не выбрано</p>}
-        {/* <div className='years-experience__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <span className='years-experience__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='years-experience__error'>Ничего не выбрано</span>} */}
+        <div className='years-experience__current'><CurrentApplicationBox /></div>
       </div>
       <div className='years-experience__button'>
         <Button

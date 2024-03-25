@@ -11,7 +11,7 @@ function StepOfficeRemote() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
 
@@ -47,16 +47,9 @@ function StepOfficeRemote() {
             radioName='work_format'//от бэка
           />
         </div>
-        {errorMessage && <span className='office-remote__error'>Ничего не выбрано</span>}
+        <span className='office-remote__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='office-remote__error'>Ничего не выбрано</span>} */}
         <div className="office-remote__current"><CurrentApplicationBox /></div>
-        {/* <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
       </div>
       <div className='office-remote__button'>
           <Button

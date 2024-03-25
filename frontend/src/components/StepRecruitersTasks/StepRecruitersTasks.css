@@ -1,7 +1,7 @@
 .recruiters-tasks__container {
   display: flex;
   flex-direction: column;
-  margin: 76px 0 0 176px;
+  margin: 65px 0 0 179px;
 }
 
 .recruiters-tasks__checkbox {
@@ -16,7 +16,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin: 0 0 0 15px;
+  margin: -3px 0 0 15px;
 }
 
 .recruiters-tasks__current {

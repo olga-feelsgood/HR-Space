@@ -4,12 +4,13 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepBusinessTrips() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -44,15 +45,9 @@ function StepBusinessTrips() {
             radioName='business_trip'//от бэка
           />
         </div>
-        {errorMessage && <p className='business-trips__error'>Ничего не выбрано</p>}
-        {/* <div className='business-trips__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <span className='business-trips__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='business-trips__error'>Ничего не выбрано</span>} */}
+        <div className='employment-type__current'><CurrentApplicationBox /></div>
       </div>
       <div className='business-trips__button'>
         <Button

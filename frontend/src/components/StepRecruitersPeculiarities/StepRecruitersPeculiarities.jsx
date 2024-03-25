@@ -4,12 +4,14 @@ import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepRecruitersPeculiarities() {
   const { data, handleChange } = useForm();
 
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   const [text, setText] = useState('');
@@ -26,7 +28,7 @@ function StepRecruitersPeculiarities() {
 
         <div className='recruiters-peculiarities__input-container'>
           <input
-            className="recruiters-peculiarities__input"
+            className={`recruiters-peculiarities__input ${errorMessage && 'recruiters-peculiarities__input_error'}`}
             type="text"
             name="hr_requirements"
             value={data.hr_requirements}
@@ -41,6 +43,8 @@ function StepRecruitersPeculiarities() {
           <div style={{ width: `${progress}%` }}></div>
           <div className="recruiters-peculiarities__character-count">{text.length}/{maxLength}</div>
 
+          <span className='recruiters-peculiarities__error'>{errorMessage}</span>
+          {/* {errorMessage && <span className='recruiters-peculiarities__error'>Ничего не написано</span>} */}
 
 
           <div className='recruiters-peculiarities__checkbox'>
@@ -61,14 +65,7 @@ function StepRecruitersPeculiarities() {
               onChange={handleChange}
             />
           </div>
-          {/* <div className='recruiters-peculiarities__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+          <div className='recruiters-peculiarities__current'><CurrentApplicationBox /></div>
         </div>
       </div>
       <div className='recruiters-peculiarities__button'>
