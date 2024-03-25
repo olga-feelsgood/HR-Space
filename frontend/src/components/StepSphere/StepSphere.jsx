@@ -28,11 +28,6 @@ function StepSphere() {
     handleChange({ target: { name: 'line_of_business', value: chip } }); // Обновляем значение в форме
   };
 
-  const handleNextButtonClick = () => {
-    if (stepIsValid) {
-      onRedirect();
-    }
-  };
 
   useEffect(() => {
     validateStep();
@@ -69,7 +64,7 @@ function StepSphere() {
       </div>
       <div className='sphere__button'>
         <Button
-          onClick={handleNextButtonClick}
+          onClick={onRedirect}
           buttonTitle='Далее'
           buttonType='button'
         />
