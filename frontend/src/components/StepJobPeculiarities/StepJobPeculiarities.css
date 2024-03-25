@@ -1,6 +1,8 @@
 .job-peculiarities__container {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  margin-left: 172px;
 }
 
 .job-peculiarities__input {
@@ -15,9 +17,12 @@
   font-weight: 400;
   line-height: 140%;
   box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2px;
 }
 
 ::placeholder {
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   color: var(--Gray-50, #959799);
@@ -27,6 +32,26 @@
   font-weight: 400;
   line-height: 140%;
   white-space: break-spaces;
+}
+
+.job-peculiarities__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.job-peculiarities__input_error {
+  border: 1px solid #EC3C3C;
+}
+
+.job-peculiarities__error {
+  display: block;
+  min-height: 17px;
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 15px 0;
 }
 
 .job-peculiarities__character-count {

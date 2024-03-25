@@ -10,7 +10,7 @@ function StepYearsOfExperience() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -61,7 +61,8 @@ function StepYearsOfExperience() {
             onChange={handleChange}
           />
         </div>
-        {errorMessage && <p className='years-experience__error'>Ничего не выбрано</p>}
+        <span className='oyears-experience__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='years-experience__error'>Ничего не выбрано</span>} */}
         <div className='years-experience__current'><CurrentApplicationBox /></div>
       </div>
       <div className='years-experience__button'>

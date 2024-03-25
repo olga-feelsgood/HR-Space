@@ -26,7 +26,7 @@ function StepJobPeculiarities() {
       <div className='job-peculiarities__container'>
         <div className='job-peculiarities__input-container'>
           <input
-            className="job-peculiarities__input"
+            className={`job-peculiarities__input ${errorMessage && 'job-peculiarities__input_error'}`}
             type="text"
             name="features_vacancy"
             value={data.features_vacancy}
@@ -38,6 +38,8 @@ function StepJobPeculiarities() {
           <div style={{ width: `${progress}%` }}></div>
           <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
         </div>
+        {/* <span className='job-peculiarities__error'>{errorMessage}</span> */}
+      {errorMessage && <span className='job-peculiarities__error'>Опишите особенности вакансии</span>}
         <div className='job-peculiarities__current'><CurrentApplicationBox /></div>
       </div>
       <div className='job-peculiarities__button'>

@@ -1,12 +1,14 @@
 .portfolio__container {
   display: flex;
   flex-direction: column;
-  margin: 65px 0 0 176px;
+  margin-top: 53px;
+  margin-left: 179px;
 }
 
 .portfolio__radiobuttons {
   display: flex;
   flex-direction: column;
+  margin-bottom: -4px;
 }
 
 .portfolio__error {

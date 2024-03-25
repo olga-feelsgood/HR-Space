@@ -34,7 +34,7 @@ import StepCheckBeforePayment from '../StepCheckBeforePayment/StepCheckBeforePay
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 import useForm from '../../hooks/useForm.jsx'
-import { submitForm } from '../../../utils/FormSubmit.jsx'
+import { submitForm } from '../../utils/FormSubmit.jsx'
 
 function App() {
 
