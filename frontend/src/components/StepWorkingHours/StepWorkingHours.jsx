@@ -74,7 +74,7 @@ function StepWorkingHours() {
         </div>
         <span className='working-hours'>{errorMessage}</span>
         {/* {errorMessage && <p className='working-hours__error'>Укажите начало и конец рабочего дня, выберете график</p>} */}
-        <div className="sphere__current">  <CurrentApplicationBox /></div>
+        <div className="working-hours__current">  <CurrentApplicationBox /></div>
       </div>
       <div className='working-hours__button'>
         <Button

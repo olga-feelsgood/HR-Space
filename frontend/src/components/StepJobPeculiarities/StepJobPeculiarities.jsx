@@ -10,7 +10,7 @@ function StepJobPeculiarities() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   const [text, setText] = useState('');
@@ -38,8 +38,8 @@ function StepJobPeculiarities() {
           <div style={{ width: `${progress}%` }}></div>
           <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
         </div>
-        {/* <span className='job-peculiarities__error'>{errorMessage}</span> */}
-      {errorMessage && <span className='job-peculiarities__error'>Опишите особенности вакансии</span>}
+        <span className='job-peculiarities__error'>{errorMessage}</span>
+      {/* {errorMessage && <span className='job-peculiarities__error'>Опишите особенности вакансии</span>} */}
         <div className='job-peculiarities__current'><CurrentApplicationBox /></div>
       </div>
       <div className='job-peculiarities__button'>

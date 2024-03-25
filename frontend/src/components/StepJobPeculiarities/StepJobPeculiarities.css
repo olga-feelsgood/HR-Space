@@ -10,7 +10,7 @@
   width: 385px;
   height: 286px;
   padding: 20px 31px 46px;
-  color: var(--Gray-50, #959799);
+  border: 1px solid #D4D7D9;
   font-family: Arial;
   font-size: 14px;
   font-style: normal;

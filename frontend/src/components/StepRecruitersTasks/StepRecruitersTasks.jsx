@@ -13,7 +13,7 @@ function StepRecruitersTasks() {
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/recruiterrequirements/recruiterspeculiarities');
@@ -79,7 +79,8 @@ function StepRecruitersTasks() {
             onChange={handleChange}
           />
         </div>
-        {errorMessage && <p className='recruiters-tasks__error'>Ничего не выбрано</p>}
+        <span className='recruiters-tasks__error'>{errorMessage}</span>
+          {/* {errorMessage && <span className='recruiters-tasks__error'>Ничего не выбрано</span>} */}
         <div className='recruiters-tasks__current'><CurrentApplicationBox /></div>
       </div>
       <div className='recruiters-tasks__button'>

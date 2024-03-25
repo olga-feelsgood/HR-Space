@@ -61,7 +61,7 @@ function StepYearsOfExperience() {
             onChange={handleChange}
           />
         </div>
-        <span className='oyears-experience__error'>{errorMessage}</span>
+        <span className='years-experience__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='years-experience__error'>Ничего не выбрано</span>} */}
         <div className='years-experience__current'><CurrentApplicationBox /></div>
       </div>

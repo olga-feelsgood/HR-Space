@@ -4,13 +4,13 @@ import RadioButtonPaymen from '../RadioButtonPayment/RadioButtonPayment.jsx';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
-import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
+// import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepTypesOfReward() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -33,7 +33,8 @@ function StepTypesOfReward() {
 
           <RadioButtonPaymen
             radioLabel='2'
-            radioLabelPercentage='50% 50%'
+            radioLabelPercentage='50%'
+            radioLabelPercentage1='50%'
             radioLabelTitle='50% за выход + 50% по окончании гарантийного периода'
             radioLabelText='Часть оплаты рекрутер получает в день вступления кандидата в должность, а часть оплаты — после окончания гарантийного периода (1 месяц)'
             radioValue='2'
@@ -52,9 +53,13 @@ function StepTypesOfReward() {
             checked={data.award_option == '3' ? true : false} //от бэка
             onChange={handleChange}
           />
-
         </div>
-        <div className='types-reward__current'><CurrentApplicationBox /></div>
+
+        <span className='types-reward__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='types-reward__error'>Ничего не выбрано</span>} */}
+
+        {/* <div className='types-reward__current'><CurrentApplicationBox /></div> */}
+
       </div>
       <div className='types-reward__button'>
         <Button
