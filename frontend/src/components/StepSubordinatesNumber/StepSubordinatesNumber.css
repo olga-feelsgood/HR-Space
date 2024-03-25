@@ -1,4 +1,3 @@
-
 .subordinates-number__container {
   display: flex;
   flex-direction: column;
@@ -18,6 +17,10 @@
   border: 1px solid var(--Gray-30, #d4d7d9);
   background: var(--White-10, #fff);
   margin-bottom: 20px;
+}
+
+.subordinates-number__current {
+  margin-bottom: 100px;
 }
 
 .subordinates-number__button {

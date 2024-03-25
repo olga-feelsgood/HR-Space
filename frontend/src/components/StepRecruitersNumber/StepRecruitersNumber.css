@@ -19,8 +19,12 @@
   flex-direction: column;
 }
 
+.recruiters-number__current {
+  margin-bottom: 100px;
+}
+
 .recruiters-number__error {
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;

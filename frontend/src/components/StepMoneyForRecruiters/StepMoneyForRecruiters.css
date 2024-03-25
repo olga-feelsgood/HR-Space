@@ -25,6 +25,10 @@
   background: var(--White-10, #fff);
 }
 
+.money-recruiters__current {
+  margin-bottom: 100px;
+}
+
 ::placeholder {
   color: var(--Gray-50, #959799);
   font-family: Arial;
@@ -33,11 +37,6 @@
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
-
-/* .rubl {
-  display: flex;
-  align-self: flex-end;
-} */
 
 .money-recruiters__button {
   position: absolute;
