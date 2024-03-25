@@ -23,9 +23,9 @@ function CurrentApplicationBox() {
             <img src={check} className="current__check" alt="check" />
             <div className="current__options">
                 {selectedItems.map((item, index) => (
-                    <span key={index} className="current__item">
+                    <a key={index} href={`#${item}`} className="current__item" style={{ textDecoration: 'none' }}>
                         {item}{' '}
-                    </span>
+                    </a>
                 ))}
             </div>
         </div>
