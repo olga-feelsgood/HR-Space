@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepFirstInterviewDate() {
   const { data, handleChange } = useForm();
@@ -20,7 +21,6 @@ function StepFirstInterviewDate() {
   return (
     <>
       <div className='interview-date__container'>
-        <div>
           <input
             className='interview-date__input'
             type='text'
@@ -29,6 +29,7 @@ function StepFirstInterviewDate() {
             onChange={handleChange}
             placeholder='ДД.ММ.ГГГГ'
           />
+        <div className='interview__current'><CurrentApplicationBox /></div>
         </div>
         <div className='interview-date__button'>
           <Button
@@ -38,7 +39,6 @@ function StepFirstInterviewDate() {
             buttonType='button'
           />
         </div>
-      </div>
     </>
   )
 }

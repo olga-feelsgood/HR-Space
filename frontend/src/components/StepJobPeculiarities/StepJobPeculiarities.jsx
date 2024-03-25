@@ -3,6 +3,7 @@ import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepJobPeculiarities() {
 
@@ -37,14 +38,7 @@ function StepJobPeculiarities() {
           <div style={{ width: `${progress}%` }}></div>
           <div className="job-peculiarities__character-count">{text.length}/{maxLength}</div>
         </div>
-        {/* <div className='job-peculiarities__button'>
-        <Button
-          onClick={onRedirect}
-          stepIsValid={stepIsValid}
-          buttonTitle='Далее'
-          buttonType='button'
-        />
-      </div> */}
+        <div className='job-peculiarities__current'><CurrentApplicationBox /></div>
       </div>
       <div className='job-peculiarities__button'>
         <Button

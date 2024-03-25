@@ -4,6 +4,7 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepInterview() {
   const { data, handleChange } = useForm();
@@ -38,14 +39,7 @@ function StepInterview() {
           />
         </div>
         {errorMessage && <p className='interview__error'>Ничего не выбрано</p>}
-        {/* <div className='interview__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <div className='interview__current'><CurrentApplicationBox /></div>
       </div>
       <div className='interview__button'>
         <Button

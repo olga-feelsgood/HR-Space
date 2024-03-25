@@ -39,7 +39,7 @@ function StepSphere() {
           placeholder="Введите название сферы"
         />
         <span className='sphere__error'>{errorMessage}</span>
-      {/* {errorMessage && <span className='sphere__error'>Напишите или выберите сферу, чтобы продолжить</span>} */}
+        {/* {errorMessage && <span className='sphere__error'>Напишите или выберите сферу, чтобы продолжить</span>} */}
         <Stack
           className="sphere__chips-container"
           direction="row" spacing={1}>
@@ -126,14 +126,6 @@ function StepSphere() {
         </Stack>
 
         <div className="sphere__current">  <CurrentApplicationBox /></div>
-        {/* <div className='sphere__button'>
-        <Button
-          onClick={onRedirect}
-          stepIsValid={stepIsValid}
-          buttonTitle='Далее'
-          buttonType='button'
-        />
-      </div> */}
       </div>
       <div className='sphere__button'>
         <Button

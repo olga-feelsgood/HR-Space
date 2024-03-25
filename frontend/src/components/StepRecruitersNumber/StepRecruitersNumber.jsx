@@ -4,6 +4,7 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepRecruitersNumber() {
   const { data, handleChange } = useForm();
@@ -46,14 +47,7 @@ function StepRecruitersNumber() {
           />
         </div>
         {errorMessage && <p className='recruiters-number__error'>Ничего не выбрано</p>}
-        {/* <div className='recruiters-number__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <div className='recruiters-number__current'><CurrentApplicationBox /></div>
       </div>
       <div className='recruiters-number__button'>
         <Button

@@ -41,14 +41,6 @@ function StepSalary() {
         <span className='salary__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='salary__error'>Укажите размер заработной платы</span>} */}
         <div className='salary__current'><CurrentApplicationBox /></div>
-        {/* <div className='salary__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
       </div>
       <div className='salary__button'>
         <Button

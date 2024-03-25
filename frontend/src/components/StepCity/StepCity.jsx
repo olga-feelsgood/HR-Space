@@ -46,14 +46,6 @@ function StepCity() {
       <span className='city__error'>{errorMessage}</span>
       {/* {errorMessage && <span className='city__error'>Город, куда требуется сотрубник, не указан</span>} */}
       <div className='city__current'><CurrentApplicationBox /></div>
-      {/* <div className='city__button'>
-        <Button
-          onClick={onRedirect}
-          stepIsValid={stepIsValid}
-          buttonTitle='Далее'
-          buttonType='button'
-        />
-      </div> */}
     </div>
     <div className='city__button'>
         <Button

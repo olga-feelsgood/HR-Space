@@ -50,14 +50,6 @@ function StepOfficeRemote() {
         <span className='office-remote__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='office-remote__error'>Ничего не выбрано</span>} */}
         <div className="office-remote__current"><CurrentApplicationBox /></div>
-        {/* <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
       </div>
       <div className='office-remote__button'>
           <Button

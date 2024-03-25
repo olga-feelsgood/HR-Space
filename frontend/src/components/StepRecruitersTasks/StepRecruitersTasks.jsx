@@ -4,6 +4,7 @@ import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepRecruitersTasks() {
   const { data, handleChange } = useForm();
@@ -79,14 +80,7 @@ function StepRecruitersTasks() {
           />
         </div>
         {errorMessage && <p className='recruiters-tasks__error'>Ничего не выбрано</p>}
-        {/* <div className='recruiters-tasks__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div> */}
+        <div className='recruiters-tasks__current'><CurrentApplicationBox /></div>
       </div>
       <div className='recruiters-tasks__button'>
         <Button

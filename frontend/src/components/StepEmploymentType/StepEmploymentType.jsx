@@ -4,6 +4,7 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepEmploymentType() {
   const { data, handleChange } = useForm();
@@ -53,6 +54,7 @@ function StepEmploymentType() {
         </div>
         <span className='employment-type__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='employment-type__error'>Ничего не выбрано</span>} */}
+        <div className='employment-type__current'><CurrentApplicationBox /></div>
       </div>
       <div className='employment-type__button'>
         <Button
