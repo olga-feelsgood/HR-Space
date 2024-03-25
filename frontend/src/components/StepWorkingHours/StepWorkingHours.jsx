@@ -4,12 +4,13 @@ import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox.jsx'
 
 function StepWorkingHours() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -20,7 +21,7 @@ function StepWorkingHours() {
       <div className='working-hours__container'>
         <div className="working-hours__inputs">
           <input
-            className="working-hours__input"
+            className={`working-hours__input ${errorMessage && 'working-hours__input_error'}`}
             type="text"
             name="start_work_day"
             value={data.start_work_day}
@@ -28,7 +29,7 @@ function StepWorkingHours() {
             placeholder="Начало рабочего дня"
           />
           <input
-            className="working-hours__input"
+            className={`working-hours__input ${errorMessage && 'working-hours__input_error'}`}
             type="text"
             name="end_work_day"
             value={data.end_work_day}
@@ -71,7 +72,9 @@ function StepWorkingHours() {
             radioName='schedule'//от бэка
           />
         </div>
-        {errorMessage && <p className='working-hours__error'>Укажите начало и конец рабочего дня, выберете график</p>}
+        <span className='working-hours'>{errorMessage}</span>
+        {/* {errorMessage && <p className='working-hours__error'>Укажите начало и конец рабочего дня, выберете график</p>} */}
+        <div className="sphere__current">  <CurrentApplicationBox /></div>
         {/* <div className='working-hours__button'>
           <Button
             onClick={onRedirect}

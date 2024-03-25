@@ -12,7 +12,7 @@ function StepSphere() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function StepSphere() {
           placeholder="Введите название сферы"
         />
         <span className='sphere__error'>{errorMessage}</span>
-        {errorMessage && <span className='sphere__error'>Ничего не выбрано</span>}
+      {/* {errorMessage && <span className='sphere__error'>Напишите или выберите сферу, чтобы продолжить</span>} */}
         <Stack
           className="sphere__chips-container"
           direction="row" spacing={1}>

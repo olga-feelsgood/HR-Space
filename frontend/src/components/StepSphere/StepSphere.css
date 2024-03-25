@@ -1,7 +1,8 @@
 .sphere__container {
   display: flex;
   flex-direction: column;
-  margin: 50px auto 0px;
+  margin-top: 50px;
+  margin-left: 172px;
 }
 
 .sphere__input {
@@ -26,7 +27,6 @@
 .sphere__input_error {
   border: 1px solid #EC3C3C;
 }
-
 
 .sphere__chips-container {
   display: flex;
@@ -53,12 +53,10 @@
   font-weight: 400;
   line-height: 16px;
   margin: 0 0 15px 0;
-  padding-left: 200px;
 }
 
 .sphere__current {
-  margin-left: 185px;
-  margin-top: 50px;
+  /* margin-top: 200px; */
 }
 
 .sphere__button {

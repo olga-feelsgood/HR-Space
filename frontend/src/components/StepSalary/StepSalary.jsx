@@ -3,12 +3,13 @@ import Button from '../Button/Button.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import CurrentApplicationBox from '../CurrentAplicationBox/CurrentApplicationBox';
 
 function StepSalary() {
   const { data, handleChange } = useForm();
   console.log(JSON.stringify(data));
   //пока что костыль, когда сделаем логику, будем брать из useFrom
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
   const [stepIsValid, setStepIsValid] = useState(true);
 
   let navigate = useNavigate();
@@ -20,7 +21,7 @@ function StepSalary() {
         <h1 className="salary__title">Заработная плата до вычета НДФЛ</h1>
         <div className="salary__inputs">
           <input
-            className="salary__input"
+            className={`salary__input ${errorMessage && 'salary__input_error'}`}
             type="text"
             name="salary_from"
             value={data.salary_from}
@@ -28,7 +29,7 @@ function StepSalary() {
             placeholder="От"
           />
           <input
-            className="salary__input"
+            className={`salary__input ${errorMessage && 'salary__input_error'}`}
             type="text"
             name="salary_to"
             value={data.salary_to}
@@ -37,6 +38,9 @@ function StepSalary() {
           />
           <p className="salary__text">₽</p>
         </div>
+        <span className='salary__error'>{errorMessage}</span>
+        {/* {errorMessage && <span className='salary__error'>Укажите размер заработной платы</span>} */}
+        <div className='salary__current'><CurrentApplicationBox /></div>
         {/* <div className='salary__button'>
           <Button
             onClick={onRedirect}
