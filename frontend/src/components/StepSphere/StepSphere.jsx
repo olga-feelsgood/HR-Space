@@ -20,10 +20,10 @@ function StepSphere() {
   const navigate = useNavigate();
   const onRedirect = () => navigate('/jobdescription/city');
 
-  const validateStep = () => {
-    const isStepValid = Object.values(data).every((value) => value !== '') && selectedLine_of_business.length === 1;
-    setStepIsValid(isStepValid);
-  };
+  // const validateStep = () => {
+  //   const isStepValid = Object.values(data).every((value) => value !== '') && selectedLine_of_business.length === 1;
+  //   setStepIsValid(isStepValid);
+  // };
 
   const handleChipClick = (chip) => {
     setSelectedLine_of_business([chip]);
@@ -31,9 +31,9 @@ function StepSphere() {
   };
 
 
-  useEffect(() => {
-    validateStep();
-  }, [data, selectedLine_of_business]);
+  // useEffect(() => {
+  //   validateStep();
+  // }, [data, selectedLine_of_business]);
 
   return (
     <>
@@ -49,7 +49,7 @@ function StepSphere() {
         <span className='sphere__error'>{errorMessage}</span>
 
         {/* {errorMessage && <span className='sphere__error'>Напишите или выберите сферу, чтобы продолжить</span>} */}
-        <Stack
+        {/* <Stack
           className="sphere__chips-container"
           direction="row" spacing={1}>
 
@@ -57,7 +57,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Автомобильный бизнес"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Автомобильный бизнес")}
           />
 
@@ -65,7 +65,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Добывающая отрасль"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Добывающая отрасль")}
           />
 
@@ -73,7 +73,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Лесная промышленность"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Лесная промышленность")}
           />
 
@@ -81,7 +81,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Металлургия"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Металлургия")}
           />
 
@@ -89,7 +89,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Продукты питания"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Продукты питания")}
           />
 
@@ -97,7 +97,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Сельское хозяйство"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Сельское хозяйство")}
           />
 
@@ -105,7 +105,7 @@ function StepSphere() {
             className="sphere__chip"
             label="Строительство"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Строительство")}
           />
 
@@ -113,14 +113,14 @@ function StepSphere() {
             className="sphere__chip"
             label="Тяжелое машиностроение"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Тяжелое машиностроение")} />
 
           <Chip
             className="sphere__chip"
             label="Химическое производство"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Химическое производство")}
           />
 
@@ -128,10 +128,10 @@ function StepSphere() {
             className="sphere__chip"
             label="Энергетика"
             variant="outlined"
-            onDelete={handleDelete}
+            // onDelete={handleDelete}
             onClick={() => handleChipClick("Энергетика")}
           />
-
+        </Stack> */}
         <Stack className='sphere__chips-container' direction='row' spacing={1}>
           {line_of_business.map((item) => (
             <Chip
@@ -150,6 +150,7 @@ function StepSphere() {
       <div className='sphere__button'>
         <Button
           onClick={onRedirect}
+          stepIsValid={stepIsValid}
           buttonTitle='Далее'
           buttonType='button'
         />
