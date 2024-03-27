@@ -36,8 +36,9 @@ function StepSalary() {
             onChange={handleChange}
             placeholder="До"
           />
-          <p className="salary__text">₽</p>
+          <span className="salary__text">₽</span>
         </div>
+        <p>Средняя заработная плата по выбранной специальности от 55 000 до 65 000 ₽</p>
         <span className='salary__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='salary__error'>Укажите размер заработной платы</span>} */}
         <div className='salary__current'><CurrentApplicationBox /></div>
