@@ -30,11 +30,11 @@ function StepMoneyForRecruiters() {
           />
           <img className="rubl" src={rubl} alt="Rubl" />
         </div>
+        <p className='money-recruiters__text'>Рекомендуемый размер вознаграждения — 1,5-2 среднемесячные зарплаты кандидата и выше</p>
 
         <span className='money-recruiters__error'>{errorMessage}</span>
-      {/* {errorMessage && <span className='money-recruiters__error'>Введите размер вознаграждения</span>} */}
+        {/* {errorMessage && <span className='money-recruiters__error'>Введите размер вознаграждения</span>} */}
 
-        <span className='money-recruiters__text'>Рекомендуемый размер вознаграждения — 1,5-2 среднемесячные зарплаты кандидата и выше</span>
         <div className='money-recruiters__current'><CurrentApplicationBox /></div>
       </div>
       <div className='money-recruiters__button'>
