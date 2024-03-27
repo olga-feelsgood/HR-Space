@@ -1,4 +1,5 @@
 import './StepRecruitersTasks.css'
+import info from '../../images/info.svg';
 import Button from '../Button/Button.jsx'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import { useState } from 'react'
@@ -33,18 +34,22 @@ function StepRecruitersTasks() {
             // onChange={handleCBChange}
             onChange={handleChange}
           />
-          <CheckBox
-            checkboxLabel='2'
-            checkboxTitle='Организация собеседований'
-            checkboxValue='2'
-            checkboxName='hr_responsibility2'//от бэка
-            checked={data.hr_responsibility2} //от бэка
-            // checked={data.hr_responsibility.includes('2') } //от бэка
-            // checked={data.hr_responsibility == '2' ? true : false} //от бэка
-            // checked={data.hr_responsibility == '2' ? true : false} //от бэка
-            // onChange={handleCBChange}
-            onChange={handleChange}
-          />
+          <div className="recruiters-tasks__info">
+            <CheckBox
+              checkboxLabel='2'
+              checkboxTitle='Организация собеседований'
+              checkboxValue='2'
+              checkboxName='hr_responsibility2'//от бэка
+              checked={data.hr_responsibility2} //от бэка
+              // checked={data.hr_responsibility.includes('2') } //от бэка
+              // checked={data.hr_responsibility == '2' ? true : false} //от бэка
+              // checked={data.hr_responsibility == '2' ? true : false} //от бэка
+              // onChange={handleCBChange}
+              onChange={handleChange}
+            />
+            <img className="info" src={info} alt="Info" />
+            <span className="info-popup">Синхронизация времени собеседования между заказчиком и кандидатом</span>
+          </div>
           <CheckBox
             checkboxLabel='3'
             checkboxTitle='Проведение собеседований'
@@ -80,7 +85,7 @@ function StepRecruitersTasks() {
           />
         </div>
         <span className='recruiters-tasks__error'>{errorMessage}</span>
-          {/* {errorMessage && <span className='recruiters-tasks__error'>Ничего не выбрано</span>} */}
+        {/* {errorMessage && <span className='recruiters-tasks__error'>Ничего не выбрано</span>} */}
         <div className='recruiters-tasks__current'><CurrentApplicationBox /></div>
       </div>
       <div className='recruiters-tasks__button'>

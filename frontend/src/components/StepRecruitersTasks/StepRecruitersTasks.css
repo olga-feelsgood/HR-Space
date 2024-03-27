@@ -8,6 +8,37 @@
   width: 538px;
 }
 
+.recruiters-tasks__info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info {
+  cursor: pointer;
+  position: relative;
+}
+
+.info-popup {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 314.521px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--Gray-40, #babdbf);
+  display: none;
+}
+
+.info:hover + .info-popup {
+  display: block;
+}
+
 .recruiters-tasks__checkbox {
   display: flex;
   flex-direction: column;

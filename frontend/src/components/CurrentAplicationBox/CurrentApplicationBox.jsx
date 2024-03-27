@@ -1,38 +1,43 @@
 import './CurrentApplicationBox.css';
 import check from '../../images/check.svg'
+import close from '../../images/close.svg';
 import { useContext } from "react"
 import FormContext from '../../context/FormContext';
 
 function CurrentApplicationBox() {
-    const { data } = useContext(FormContext);
-    const maxVisibleItems = 4;
+    const { data, setData } = useContext(FormContext);
 
-    const dataKeys = Object.keys(data);
-    const visibleData = dataKeys.slice(0, maxVisibleItems);
+    //реализация удаления, но без стилизации
+    // const handleDelete = (keyToDelete) => {
+    //     const newData = { ...data };
+    //     delete newData[keyToDelete];
+    //     setData(newData);
+    // };
 
     return (
-        <>
-            <div className="current__container">
-                <h2 className="current__title">{data.name}</h2>
-                {/* <img src={check} className="current__check" /> */}
-                <div className="current__options">
-                    {visibleData.map(key => (
-                        <p key={key}>{data[key]}</p>
-                    ))}
-                    {data.skill && data.skill.length > 0 && (
-                        <div className="current__skills">
-                            {data.skill.map((skill, index) => (
-                                <span key={index} className="current__chip">
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
+        <div className="current__container">
+            <h2 className="current__title">Текущая заявка {data.name}</h2>
+            {/* <img src={check} className="current__check" alt="check" /> */}
+            <div className="current__options">
+                {Object.keys(data).map((key) => {
+                    if (data[key]) {
+                        return (
+                            <span key={key} className="current__item">
+                                {data[key]}
+                                {/* <button
+                                    className="delete__button"
+                                    onClick={() => handleDelete(key)}
+                                >
+                                    <img className="delete_button" src={close} alt="delete-button" />
+                                </button> */}
+                            </span>
+                        );
+                    }
+                    return null;
+                })}
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
 export default CurrentApplicationBox;
