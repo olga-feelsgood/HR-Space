@@ -25,7 +25,7 @@ function StepOfficeRemote() {
           <RadioButton
             radioLabel='remote'
             radioTitle='Удалённая'
-            radioValue='remote'
+            radioValue='Удалённая'
             checked={data.work_format == 'remote' ? true : false} //от бэка
             onChange={handleChange}
             radioName='work_format'//от бэка
@@ -33,7 +33,7 @@ function StepOfficeRemote() {
           <RadioButton
             radioLabel='mixed'
             radioTitle='Гибрид'
-            radioValue='mixed'
+            radioValue='Гибрид'
             onChange={handleChange}
             checked={data.work_format == 'mixed' ? true : false} //от бэка
             radioName='work_format'//от бэка
@@ -41,7 +41,7 @@ function StepOfficeRemote() {
           <RadioButton
             radioLabel='office'
             radioTitle='Офис'
-            radioValue='office'
+            radioValue='Офис'
             onChange={handleChange}
             checked={data.work_format == 'office' ? true : false} //от бэка
             radioName='work_format'//от бэка
@@ -52,13 +52,13 @@ function StepOfficeRemote() {
         <div className="office-remote__current"><CurrentApplicationBox /></div>
       </div>
       <div className='office-remote__button'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
     </>
   )
 }

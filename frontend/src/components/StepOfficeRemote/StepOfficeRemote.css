@@ -1,7 +1,8 @@
 .office-remote__container {
   display: flex;
-  margin-top: 51px;
-  margin-left: 178px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
 }
 
@@ -14,7 +15,7 @@
 .office-remote__error {
   display: block;
   min-height: 17px;
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
@@ -25,8 +26,7 @@
 }
 
 .office-remote__current {
-  margin-top: 138px;
-  width: 780px;
+  width: 538px;
 }
 
 .office-remote__button {
