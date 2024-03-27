@@ -9,12 +9,11 @@
 }
 
 .recruiters-number__text {
-  color: #303233;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
+  font-weight: 400;
+  line-height: 164%; /* 32.8px */
   margin: 0 0 20px;
 }
 
@@ -34,8 +33,39 @@
   margin: -4px 0 0 19px;
 }
 
-.recruiters-number__button {
+.recruiters-number__info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info {
+  cursor: pointer;
+  position: relative;
+}
+
+.info-popup {
+  position: absolute;
+  top: 12%;
+  left: 85%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 314.521px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--Gray-40, #babdbf);
+  display: none;
+}
+
+.info:hover + .info-popup {
+  display: block;
+}
+
+/* .recruiters-number__button {
   position: absolute;
   right: 0px;
   bottom: 0px;
-}
+} */

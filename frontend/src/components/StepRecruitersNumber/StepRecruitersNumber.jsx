@@ -1,4 +1,5 @@
 import './StepRecruitersNumber.css'
+import info from '../../images/info.svg';
 import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
@@ -19,7 +20,11 @@ function StepRecruitersNumber() {
   return (
     <>
       <div className='recruiters-number__container'>
-        <p className='recruiters-number__text'>Укажите количество рекрутеров, которые будут работать над заявкой:</p>
+        <div className="recruiters-number__info">
+          <span className='recruiters-number__text'>Укажите количество рекрутеров, которые будут работать над заявкой:</span>
+          <img className="info" src={info} alt="Info" />
+          <span className="info-popup">Оплату получит только рекрутер, который закроет заявку</span>
+        </div>
         <div className='recruiters-number__radiobuttons'>
           <RadioButton
             radioLabel='1'
@@ -47,7 +52,7 @@ function StepRecruitersNumber() {
           />
         </div>
         <span className='recruiters-number__error'>{errorMessage}</span>
-          {/* {errorMessage && <span className='recruiters-number__error'>Введите число сотрудников для поиска</span>} */}
+        {/* {errorMessage && <span className='recruiters-number__error'>Введите число сотрудников для поиска</span>} */}
         <div className='recruiters-number__current'><CurrentApplicationBox /></div>
       </div>
       <div className='recruiters-number__button'>
