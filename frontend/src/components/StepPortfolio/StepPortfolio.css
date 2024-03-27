@@ -1,8 +1,13 @@
 .portfolio__container {
   display: flex;
   flex-direction: column;
-  margin-top: 53px;
-  margin-left: 179px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio__current {
+  width: 538px;
 }
 
 .portfolio__radiobuttons {
@@ -12,7 +17,7 @@
 }
 
 .portfolio__error {
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
