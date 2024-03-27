@@ -13,8 +13,8 @@ function CurrentApplicationBox() {
     return (
         <>
             <div className="current__container">
-                <h2 className="current__title">Текущая заявка: {data.name}</h2>
-                <img src={check} className="current__check" />
+                <h2 className="current__title">{data.name}</h2>
+                {/* <img src={check} className="current__check" /> */}
                 <div className="current__options">
                     {visibleData.map(key => (
                         <p key={key}>{data[key]}</p>
@@ -28,13 +28,6 @@ function CurrentApplicationBox() {
                             ))}
                         </div>
                     )}
-                    {/* {visibleData.map(key => (
-                        <p key={key}>{data[key]}</p>
-                    ))}
-                    {dataKeys.length > maxVisibleItems && (
-                        <p>...</p>
-                    )} */}
-
                 </div>
 
             </div>
