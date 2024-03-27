@@ -1,7 +1,11 @@
 .recruiters-tasks__container {
   display: flex;
   flex-direction: column;
-  margin: 65px 0 0 179px;
+  margin: 50px 0 0 179px;
+}
+
+.recruiters-tasks__current {
+  width: 538px;
 }
 
 .recruiters-tasks__checkbox {
@@ -10,7 +14,7 @@
 }
 
 .recruiters-tasks__error {
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
@@ -19,8 +23,8 @@
   margin: -3px 0 0 15px;
 }
 
-.recruiters-tasks__button {
+/* .recruiters-tasks__button {
   position: absolute;
   right: 0px;
   bottom: 0px;
-}
+} */

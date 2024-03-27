@@ -4,6 +4,10 @@
   margin: 50px 0 0 172px;
 }
 
+.recruiters-number__current {
+  width: 538px;
+}
+
 .recruiters-number__text {
   color: #303233;
   font-family: Arial;
@@ -21,7 +25,7 @@
 }
 
 .recruiters-number__error {
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
