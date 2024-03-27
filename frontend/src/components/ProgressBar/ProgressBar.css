@@ -1,5 +1,5 @@
 .progress-bar {
-  max-width: 1440px;
+  width: 1280px;
   display: flex;
   flex-direction: column;
   margin: 20px 64px 0;
@@ -9,7 +9,7 @@
   margin: 0;
   display: flex;
   justify-content: flex-start;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
   font-size: 28px;
   font-style: normal;
   font-weight: normal;
@@ -20,7 +20,7 @@
   margin: 0;
   display: flex;
   flex-direction: row;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
 }
 
 .progress-bar__links {
@@ -40,20 +40,20 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  color: #BABDBF;
+  color: #babdbf;
 }
 
 .progress-bar__link_active {
-  color: #71A2FF;
+  color: #71a2ff;
 }
 
 .progress-bar__step {
   text-decoration: none;
-  color: #71A2FF;
+  color: #71a2ff;
 }
 
 .progress-bar__step:visited {
-  color: #71A2FF;
+  color: #71a2ff;
 }
 
 .progress-bar__line {
@@ -61,10 +61,10 @@
   width: 276px;
   min-height: 8px;
   border-radius: 2px;
-  background-color: #BABDBF;
+  background-color: #babdbf;
   margin-bottom: 16px;
 }
 
 .progress-bar__line_active {
-  background-color: #71A2FF;
+  background-color: #71a2ff;
 }

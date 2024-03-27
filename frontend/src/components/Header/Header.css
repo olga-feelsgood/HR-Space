@@ -1,13 +1,11 @@
 .header {
   display: flex;
-  max-width: 1440px;
+  width: 1280px;
   min-height: 76px;
   margin: 0;
   padding: 0 96px;
   justify-content: space-between;
   align-items: center;
-  /* flex-shrink: 0; */
-  /* background: var(--Black-60, #222324); */
   background-color: #222324;
 }
 
