@@ -1,4 +1,5 @@
 import './StepInterview.css'
+import info from '../../images/info.svg';
 import Button from '../Button/Button.jsx'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import { useState } from 'react';
@@ -29,14 +30,18 @@ function StepInterview() {
             checked={data.format_interview == '1' ? true : false} //от бэка
             onChange={handleChange}
           />
-          <RadioButton
-            radioLabel='2'
-            radioTitle='С кандидатами, прошедшими предварительный отбор'
-            radioValue='2'
-            radioName='format_interview'//от бэка
-            checked={data.format_interview == '2' ? true : false} //от бэка
-            onChange={handleChange}
-          />
+          <div className="interview__info">
+            <RadioButton
+              radioLabel='2'
+              radioTitle='С кандидатами, прошедшими предварительный отбор'
+              radioValue='2'
+              radioName='format_interview'//от бэка
+              checked={data.format_interview == '2' ? true : false} //от бэка
+              onChange={handleChange}
+            />
+            <img className="info" src={info} alt="Info" />
+            <span className="info-popup">Собеседование с рекрутером, тестовое задание и прочие этапы отбора</span>
+          </div>
         </div>
         <span className='interview__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='interview__error'>Ничего не выбрано</span>} */}
