@@ -1,4 +1,5 @@
 import './StepFirstInterviewDate.css'
+import info from '../../images/info.svg';
 import calendar from '../../images/calendar.svg';
 import Button from '../Button/Button.jsx'
 import { useState } from 'react';
@@ -31,9 +32,15 @@ function StepFirstInterviewDate() {
           />
           <img className='interview-date__calendar-image' src={calendar} alt='Logo' />
         </div>
-        <span className='interview-date__error'>{errorMessage}</span>
-        {/* {errorMessage && <span className='interview-date__error'>Дата не введена</span>} */}
-        <span className='interview-date__text'>В среднем рекрутерам требуется от 7 дней</span>
+
+        <div className="interview-date__info">
+          <span className='interview-date__text'>В среднем рекрутерам требуется от 7 дней</span>
+          <span className='interview-date__error'>{errorMessage}</span>
+          {/* {errorMessage && <span className='interview-date__error'>Дата не введена</span>} */}
+          <img className="info" src={info} alt="Info" />
+          <span className="info-popup">За закрытие срочных заявок рекрутер может запросить дополнительное вознаграждение</span>
+        </div>
+
         <div className='interview__current'><CurrentApplicationBox /></div>
       </div>
       <div className='interview-date__button'>
