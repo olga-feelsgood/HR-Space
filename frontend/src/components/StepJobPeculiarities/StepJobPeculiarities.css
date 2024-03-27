@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  margin-left: 172px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-peculiarities__current {
+  width: 538px;
+  margin-bottom: 150px;
 }
 
 .job-peculiarities__input {
@@ -10,7 +16,7 @@
   width: 385px;
   height: 286px;
   padding: 20px 31px 46px;
-  border: 1px solid #D4D7D9;
+  border: 1px solid #d4d7d9;
   font-family: Arial;
   font-size: 14px;
   font-style: normal;
@@ -18,7 +24,6 @@
   line-height: 140%;
   box-sizing: border-box;
   border-radius: 8px;
-  margin-bottom: 2px;
 }
 
 ::placeholder {
@@ -35,17 +40,17 @@
 }
 
 .job-peculiarities__input:focus {
-  outline: 1px solid #71A2FF;
+  outline: 1px solid #71a2ff;
 }
 
 .job-peculiarities__input_error {
-  border: 1px solid #EC3C3C;
+  border: 1px solid #ec3c3c;
 }
 
 .job-peculiarities__error {
   display: block;
   min-height: 17px;
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 12px;
   font-style: normal;
@@ -57,7 +62,7 @@
 .job-peculiarities__character-count {
   position: absolute;
   top: 300px;
-  left: 380px;
+  left: 510px;
   color: var(--Gray-50, #959799);
   text-align: center;
   font-family: Arial;
@@ -67,8 +72,8 @@
   line-height: 140%; /* 19.6px */
 }
 
-.job-peculiarities__button {
+/* .job-peculiarities__button {
   position: absolute;
   right: 0px;
   bottom: 0px;
-}
+} */

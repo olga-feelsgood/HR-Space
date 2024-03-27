@@ -1,9 +1,13 @@
-
 .subordinates-number__container {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  margin-left: 172px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subordinates-number__current {
+  width: 538px;
 }
 
 .subordinates-number__input {
@@ -22,17 +26,17 @@
 }
 
 .subordinates-number__input:focus {
-  outline: 1px solid #71A2FF;
+  outline: 1px solid #71a2ff;
 }
 
 .subordinates-number__input_error {
-  border: 1px solid #EC3C3C;
+  border: 1px solid #ec3c3c;
 }
 
 .subordinates-number__error {
   display: block;
   min-height: 17px;
-  color: #EC3C3C;
+  color: #ec3c3c;
   font-family: Arial;
   font-size: 12px;
   font-style: normal;
@@ -40,7 +44,6 @@
   line-height: 16px;
   margin: 0 0 15px 0;
 }
-
 
 .subordinates-number__button {
   position: absolute;

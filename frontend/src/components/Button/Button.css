@@ -11,8 +11,8 @@
   line-height: 20px;
   padding: 12px 0;
   position: absolute;
-  bottom: 200px;
-  right: 0;
+  bottom: 100px;
+  right: 50px;
 }
 
 .button:hover {
