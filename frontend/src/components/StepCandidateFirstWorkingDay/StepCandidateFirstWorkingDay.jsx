@@ -31,9 +31,10 @@ function StepCandidateFirstWorkingDay() {
           />
           <img className='candidate-firstday__calendar-image' src={calendar} alt='Logo' />
         </div>
+        <p className='candidate-firstday__text'>По статистике площадки средний срок закрытия вакансии — 1 месяц.</p>
         <span className='candidate-firstday__error'>{errorMessage}</span>
         {/* {errorMessage && <span className='candidate-firstday__error'>Дата не введена</span>} */}
-        <span className='candidate-firstday__text'>По статистике площадки средний срок закрытия вакансии — 1 месяц.</span>
+
 
         <div className='candidate-firstday__current'><CurrentApplicationBox /></div>
       </div>
